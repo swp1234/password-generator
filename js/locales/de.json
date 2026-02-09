@@ -1,0 +1,41 @@
+{
+  "app": {
+    "title": "Passwortgenerator - Sicheres Zufallspasswort-Tool",
+    "description": "Sicherer Zufallspasswortgenerator mit anpassbaren Optionen, Stärkeanzeige, Ein-Klick-Kopieren und Passwort-Verlauf",
+    "loading": "Lädt..."
+  },
+  "header": {
+    "title": "Passwortgenerator",
+    "subtitle": "Generieren Sie starke und sichere Passwörter"
+  },
+  "labels": {
+    "strength": "Stärke",
+    "length": "Passwortlänge",
+    "history": "Zuletzt Generierte Passwörter"
+  },
+  "options": {
+    "uppercase": "Großbuchstaben (A-Z)",
+    "lowercase": "Kleinbuchstaben (a-z)",
+    "numbers": "Zahlen (0-9)",
+    "special": "Sonderzeichen (!@#$%)"
+  },
+  "buttons": {
+    "copy": "Kopieren",
+    "generate": "Generieren",
+    "clearHistory": "Verlauf Löschen"
+  },
+  "messages": {
+    "copied": "Kopiert!",
+    "historyEmpty": "Noch keine Passwörter generiert",
+    "confirmClear": "Sind Sie sicher, dass Sie den Verlauf löschen möchten?"
+  },
+  "strength": {
+    "weak": "Schwach",
+    "fair": "Mittel",
+    "good": "Gut",
+    "strong": "Sehr Stark"
+  },
+  "recommendations": {
+    "title": "Probieren Sie Auch"
+  }
+}

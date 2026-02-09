@@ -1,0 +1,41 @@
+{
+  "app": {
+    "title": "Générateur de Mots de Passe - Outil de Mot de Passe Aléatoire Sécurisé",
+    "description": "Générateur de mot de passe aléatoire sécurisé avec options personnalisables, indicateur de force, copie en un clic et historique des mots de passe",
+    "loading": "Chargement..."
+  },
+  "header": {
+    "title": "Générateur de Mots de Passe",
+    "subtitle": "Générez des mots de passe forts et sécurisés"
+  },
+  "labels": {
+    "strength": "Force",
+    "length": "Longueur du Mot de Passe",
+    "history": "Mots de Passe Générés Récemment"
+  },
+  "options": {
+    "uppercase": "Lettres Majuscules (A-Z)",
+    "lowercase": "Lettres Minuscules (a-z)",
+    "numbers": "Chiffres (0-9)",
+    "special": "Caractères Spéciaux (!@#$%)"
+  },
+  "buttons": {
+    "copy": "Copier",
+    "generate": "Générer",
+    "clearHistory": "Effacer l'Historique"
+  },
+  "messages": {
+    "copied": "Copié!",
+    "historyEmpty": "Aucun mot de passe généré pour le moment",
+    "confirmClear": "Êtes-vous sûr de vouloir effacer l'historique?"
+  },
+  "strength": {
+    "weak": "Faible",
+    "fair": "Moyen",
+    "good": "Bon",
+    "strong": "Très Fort"
+  },
+  "recommendations": {
+    "title": "Essayez Aussi"
+  }
+}

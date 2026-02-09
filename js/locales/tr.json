@@ -1,0 +1,41 @@
+{
+  "app": {
+    "title": "Parola Üreticisi - Güvenli Rasgele Parola Aracı",
+    "description": "Özelleştirilebilir seçenekler, güç göstergesi, tek tıklamayla kopyalama ve parola geçmişi ile güvenli rasgele parola üreticisi",
+    "loading": "Yükleniyor..."
+  },
+  "header": {
+    "title": "Parola Üreticisi",
+    "subtitle": "Güçlü ve güvenli parolalar oluşturun"
+  },
+  "labels": {
+    "strength": "Güç",
+    "length": "Parola Uzunluğu",
+    "history": "Son Oluşturulan Parolalar"
+  },
+  "options": {
+    "uppercase": "Büyük Harfler (A-Z)",
+    "lowercase": "Küçük Harfler (a-z)",
+    "numbers": "Rakamlar (0-9)",
+    "special": "Özel Karakterler (!@#$%)"
+  },
+  "buttons": {
+    "copy": "Kopyala",
+    "generate": "Oluştur",
+    "clearHistory": "Geçmişi Temizle"
+  },
+  "messages": {
+    "copied": "Kopyalandı!",
+    "historyEmpty": "Henüz oluşturulmuş parola yok",
+    "confirmClear": "Geçmişi temizlemek istediğinizden emin misiniz?"
+  },
+  "strength": {
+    "weak": "Zayıf",
+    "fair": "Orta",
+    "good": "İyi",
+    "strong": "Çok Güçlü"
+  },
+  "recommendations": {
+    "title": "Bunu da Deneyin"
+  }
+}

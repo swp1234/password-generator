@@ -1,0 +1,41 @@
+{
+  "app": {
+    "title": "Gerador de Senhas - Ferramenta Segura de Senhas Aleatórias",
+    "description": "Gerador seguro de senhas aleatórias com opções personalizáveis, indicador de força, cópia com um clique e histórico de senhas",
+    "loading": "Carregando..."
+  },
+  "header": {
+    "title": "Gerador de Senhas",
+    "subtitle": "Gere senhas fortes e seguras"
+  },
+  "labels": {
+    "strength": "Força",
+    "length": "Comprimento da Senha",
+    "history": "Senhas Geradas Recentemente"
+  },
+  "options": {
+    "uppercase": "Letras Maiúsculas (A-Z)",
+    "lowercase": "Letras Minúsculas (a-z)",
+    "numbers": "Números (0-9)",
+    "special": "Caracteres Especiais (!@#$%)"
+  },
+  "buttons": {
+    "copy": "Copiar",
+    "generate": "Gerar",
+    "clearHistory": "Limpar Histórico"
+  },
+  "messages": {
+    "copied": "Copiado!",
+    "historyEmpty": "Nenhuma senha gerada ainda",
+    "confirmClear": "Você tem certeza que deseja limpar o histórico?"
+  },
+  "strength": {
+    "weak": "Fraco",
+    "fair": "Regular",
+    "good": "Bom",
+    "strong": "Muito Forte"
+  },
+  "recommendations": {
+    "title": "Experimente Também"
+  }
+}

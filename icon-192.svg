@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2980b9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1f5f8f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="192" height="192" fill="url(#bgGrad)" rx="30"/>
+
+  <!-- Padlock Shape -->
+  <!-- Lock body -->
+  <rect x="52" y="78" width="88" height="70" rx="8" fill="#ffffff" opacity="0.95"/>
+
+  <!-- Shackle (curved top) -->
+  <path d="M 70 78 Q 70 40 96 40 Q 122 40 122 78" fill="none" stroke="#ffffff" stroke-width="12" opacity="0.95"/>
+
+  <!-- Keyhole -->
+  <circle cx="96" cy="95" r="8" fill="#2980b9"/>
+  <path d="M 96 103 L 96 128" stroke="#2980b9" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Security checkmark -->
+  <g transform="translate(155, 155)">
+    <circle cx="0" cy="0" r="15" fill="#27ae60" opacity="0.9"/>
+    <path d="M -6 0 L -2 4 L 8 -6" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Subtle shine effect -->
+  <ellipse cx="70" cy="60" rx="20" ry="15" fill="white" opacity="0.15"/>
+</svg>

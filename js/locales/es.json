@@ -1,0 +1,41 @@
+{
+  "app": {
+    "title": "Generador de Contraseñas - Herramienta Segura de Contraseñas Aleatorias",
+    "description": "Generador seguro de contraseñas aleatorias con opciones personalizables, indicador de fortaleza, copia con un clic e historial de contraseñas",
+    "loading": "Cargando..."
+  },
+  "header": {
+    "title": "Generador de Contraseñas",
+    "subtitle": "Genera contraseñas fuertes y seguras"
+  },
+  "labels": {
+    "strength": "Fortaleza",
+    "length": "Longitud de Contraseña",
+    "history": "Contraseñas Generadas Recientemente"
+  },
+  "options": {
+    "uppercase": "Letras Mayúsculas (A-Z)",
+    "lowercase": "Letras Minúsculas (a-z)",
+    "numbers": "Números (0-9)",
+    "special": "Caracteres Especiales (!@#$%)"
+  },
+  "buttons": {
+    "copy": "Copiar",
+    "generate": "Generar",
+    "clearHistory": "Borrar Historial"
+  },
+  "messages": {
+    "copied": "¡Copiado!",
+    "historyEmpty": "Aún no hay contraseñas generadas",
+    "confirmClear": "¿Está seguro de que desea borrar el historial?"
+  },
+  "strength": {
+    "weak": "Débil",
+    "fair": "Moderado",
+    "good": "Bueno",
+    "strong": "Muy Fuerte"
+  },
+  "recommendations": {
+    "title": "También Prueba Estos"
+  }
+}

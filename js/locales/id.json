@@ -1,0 +1,41 @@
+{
+  "app": {
+    "title": "Pembuat Kata Sandi - Alat Kata Sandi Acak yang Aman",
+    "description": "Pembuat kata sandi acak yang aman dengan opsi yang dapat disesuaikan, indikator kekuatan, salin satu klik, dan riwayat kata sandi",
+    "loading": "Memuat..."
+  },
+  "header": {
+    "title": "Pembuat Kata Sandi",
+    "subtitle": "Buat kata sandi yang kuat dan aman"
+  },
+  "labels": {
+    "strength": "Kekuatan",
+    "length": "Panjang Kata Sandi",
+    "history": "Kata Sandi yang Baru Dibuat"
+  },
+  "options": {
+    "uppercase": "Huruf Besar (A-Z)",
+    "lowercase": "Huruf Kecil (a-z)",
+    "numbers": "Angka (0-9)",
+    "special": "Karakter Khusus (!@#$%)"
+  },
+  "buttons": {
+    "copy": "Salin",
+    "generate": "Buat",
+    "clearHistory": "Hapus Riwayat"
+  },
+  "messages": {
+    "copied": "Disalin!",
+    "historyEmpty": "Belum ada kata sandi yang dibuat",
+    "confirmClear": "Apakah Anda yakin ingin menghapus riwayat?"
+  },
+  "strength": {
+    "weak": "Lemah",
+    "fair": "Sedang",
+    "good": "Baik",
+    "strong": "Sangat Kuat"
+  },
+  "recommendations": {
+    "title": "Coba Juga Ini"
+  }
+}

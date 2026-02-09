@@ -1,0 +1,41 @@
+{
+  "app": {
+    "title": "密码生成器 - 强大的随机密码生成工具",
+    "description": "安全的随机密码生成器，支持自定义选项、强度指示、一键复制和密码历史记录",
+    "loading": "加载中..."
+  },
+  "header": {
+    "title": "密码生成器",
+    "subtitle": "生成强大和安全的密码"
+  },
+  "labels": {
+    "strength": "强度",
+    "length": "密码长度",
+    "history": "最近生成的密码"
+  },
+  "options": {
+    "uppercase": "大写字母 (A-Z)",
+    "lowercase": "小写字母 (a-z)",
+    "numbers": "数字 (0-9)",
+    "special": "特殊字符 (!@#$%)"
+  },
+  "buttons": {
+    "copy": "复制",
+    "generate": "生成",
+    "clearHistory": "清除历史记录"
+  },
+  "messages": {
+    "copied": "已复制!",
+    "historyEmpty": "还没有生成密码",
+    "confirmClear": "确定要清除历史记录吗?"
+  },
+  "strength": {
+    "weak": "弱",
+    "fair": "一般",
+    "good": "良好",
+    "strong": "非常强"
+  },
+  "recommendations": {
+    "title": "也试试这些"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "app": {
+    "title": "パスワードジェネレータ - 安全なランダムパスワード作成ツール",
+    "description": "安全なランダムパスワードジェネレータ - カスタマイズ可能なオプション、強度インジケータ、ワンクリックコピー、パスワード履歴機能",
+    "loading": "読み込み中..."
+  },
+  "header": {
+    "title": "パスワードジェネレータ",
+    "subtitle": "強力で安全なパスワードを生成します"
+  },
+  "labels": {
+    "strength": "強度",
+    "length": "パスワード長",
+    "history": "最近生成されたパスワード"
+  },
+  "options": {
+    "uppercase": "大文字 (A-Z)",
+    "lowercase": "小文字 (a-z)",
+    "numbers": "数字 (0-9)",
+    "special": "特殊文字 (!@#$%)"
+  },
+  "buttons": {
+    "copy": "コピー",
+    "generate": "生成",
+    "clearHistory": "履歴を削除"
+  },
+  "messages": {
+    "copied": "コピーしました!",
+    "historyEmpty": "生成されたパスワードはありません",
+    "confirmClear": "履歴を削除してもよろしいですか?"
+  },
+  "strength": {
+    "weak": "弱い",
+    "fair": "普通",
+    "good": "強い",
+    "strong": "非常に強い"
+  },
+  "recommendations": {
+    "title": "他の便利なツール"
+  }
+}

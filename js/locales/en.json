@@ -1,0 +1,41 @@
+{
+  "app": {
+    "title": "Password Generator - Secure Random Password Tool",
+    "description": "Safe random password generator with customizable options, strength indicator, one-click copy, and password history",
+    "loading": "Loading..."
+  },
+  "header": {
+    "title": "Password Generator",
+    "subtitle": "Generate strong and secure passwords"
+  },
+  "labels": {
+    "strength": "Strength",
+    "length": "Password Length",
+    "history": "Recent Passwords"
+  },
+  "options": {
+    "uppercase": "Uppercase (A-Z)",
+    "lowercase": "Lowercase (a-z)",
+    "numbers": "Numbers (0-9)",
+    "special": "Special Characters (!@#$%)"
+  },
+  "buttons": {
+    "copy": "Copy",
+    "generate": "Generate",
+    "clearHistory": "Clear History"
+  },
+  "messages": {
+    "copied": "Copied!",
+    "historyEmpty": "No generated passwords yet",
+    "confirmClear": "Are you sure you want to clear the history?"
+  },
+  "strength": {
+    "weak": "Weak",
+    "fair": "Fair",
+    "good": "Good",
+    "strong": "Very Strong"
+  },
+  "recommendations": {
+    "title": "Try These Too"
+  }
+}
