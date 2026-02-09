@@ -742,3 +742,35 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* Selection Color */
+::selection {
+    background: #2980b9;
+    color: white;
+}
+
+::-moz-selection {
+    background: #2980b9;
+    color: white;
+}
+
+/* Focus Visible */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+[role="button"]:focus-visible {
+    outline: 3px solid #2980b9;
+    outline-offset: 2px;
+}
+
+/* Glassmorphism Enhancement */
+.header, .modal, .overlay, [role="dialog"], .menu {
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+}
+
+/* Card/Panel Glassmorphism */
+.card, .panel, .sidebar, [class*="card"] {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
