@@ -6,6 +6,8 @@ const URLS_TO_CACHE = [
     './css/style.css',
     './js/app.js',
     './js/i18n.js',
+    './icon-192.svg',
+    './icon-512.svg',
     './js/locales/ko.json',
     './js/locales/en.json',
     './js/locales/zh.json',
