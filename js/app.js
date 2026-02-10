@@ -6,20 +6,22 @@ class PasswordGenerator {
     }
 
     async init() {
-        // Initialize i18n
-        await i18n.loadTranslations(i18n.currentLang);
+        try {
+            await i18n.loadTranslations(i18n.currentLang);
+        } catch (e) {
+            console.warn('i18n init failed:', e);
+        }
 
-        // Setup UI
         this.setupEventListeners();
         this.generateNewPassword();
         this.updateHistoryUI();
         this.setupLanguageSelector();
 
-        // Hide loader
-        setTimeout(() => {
-            const loader = document.getElementById('app-loader');
-            if (loader) loader.classList.add('hidden');
-        }, 300);
+        const loader = document.getElementById('app-loader');
+        if (loader) {
+            loader.classList.add('hidden');
+            setTimeout(() => loader.remove(), 300);
+        }
     }
 
     setupEventListeners() {
