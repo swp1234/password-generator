@@ -36,6 +36,11 @@
     "strong": "Çok Güçlü"
   },
   "recommendations": {
-    "title": "Bunu da Deneyin"
+    "title": "Bunu da Deneyin",
+    "shoppingCalc": "Döviz Hesaplayıcı",
+    "detoxTimer": "Dijital Detoks",
+    "lottery": "Piyango Üreticisi",
+    "idleClicker": "Zindanı Tıklayıcı",
+    "zigzagRunner": "Zikzak Koşucu"
   }
 }

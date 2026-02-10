@@ -36,6 +36,11 @@
     "strong": "非常に強い"
   },
   "recommendations": {
-    "title": "他の便利なツール"
+    "title": "他の便利なツール",
+    "shoppingCalc": "為替計算機",
+    "detoxTimer": "デジタルデトックス",
+    "lottery": "ロトジェネレータ",
+    "idleClicker": "ダンジョンクリッカー",
+    "zigzagRunner": "ジグザグランナー"
   }
 }

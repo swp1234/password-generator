@@ -36,6 +36,11 @@
     "strong": "Muito Forte"
   },
   "recommendations": {
-    "title": "Experimente Também"
+    "title": "Experimente Também",
+    "shoppingCalc": "Calculadora de Câmbio",
+    "detoxTimer": "Desintoxicação Digital",
+    "lottery": "Gerador de Loteria",
+    "idleClicker": "Clicker de Masmorra",
+    "zigzagRunner": "Corredor Zigzag"
   }
 }

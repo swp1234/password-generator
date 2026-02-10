@@ -36,6 +36,11 @@
     "strong": "Очень сильный"
   },
   "recommendations": {
-    "title": "Попробуйте также"
+    "title": "Попробуйте также",
+    "shoppingCalc": "Калькулятор курсов",
+    "detoxTimer": "Цифровой детокс",
+    "lottery": "Генератор лотереи",
+    "idleClicker": "Кликер подземелья",
+    "zigzagRunner": "Зигзаг бегун"
   }
 }

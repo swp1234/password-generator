@@ -36,6 +36,11 @@
     "strong": "Très Fort"
   },
   "recommendations": {
-    "title": "Essayez Aussi"
+    "title": "Essayez Aussi",
+    "shoppingCalc": "Calculatrice de Change",
+    "detoxTimer": "Désintoxication Numérique",
+    "lottery": "Générateur de Loterie",
+    "idleClicker": "Cliquez Donjon",
+    "zigzagRunner": "Coureur Zigzag"
   }
 }

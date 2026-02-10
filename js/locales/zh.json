@@ -36,6 +36,11 @@
     "strong": "非常强"
   },
   "recommendations": {
-    "title": "也试试这些"
+    "title": "也试试这些",
+    "shoppingCalc": "汇率计算器",
+    "detoxTimer": "数字排毒",
+    "lottery": "彩票生成器",
+    "idleClicker": "地下城点击器",
+    "zigzagRunner": "之字形跑步者"
   }
 }

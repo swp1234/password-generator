@@ -36,6 +36,11 @@
     "strong": "매우 강함"
   },
   "recommendations": {
-    "title": "이것도 해보세요"
+    "title": "이것도 해보세요",
+    "shoppingCalc": "환율 계산기",
+    "detoxTimer": "디지털 해독",
+    "lottery": "로또 생성기",
+    "idleClicker": "던전 클리커",
+    "zigzagRunner": "지그재그 러너"
   }
 }

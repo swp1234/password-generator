@@ -36,6 +36,11 @@
     "strong": "Sangat Kuat"
   },
   "recommendations": {
-    "title": "Coba Juga Ini"
+    "title": "Coba Juga Ini",
+    "shoppingCalc": "Kalkulator Tukar Nilai",
+    "detoxTimer": "Detoks Digital",
+    "lottery": "Pembuat Lotere",
+    "idleClicker": "Klik Dungeon",
+    "zigzagRunner": "Pelari Zigzag"
   }
 }

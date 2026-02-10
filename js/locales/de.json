@@ -36,6 +36,11 @@
     "strong": "Sehr Stark"
   },
   "recommendations": {
-    "title": "Probieren Sie Auch"
+    "title": "Probieren Sie Auch",
+    "shoppingCalc": "Wechselkursrechner",
+    "detoxTimer": "Digitale Entgiftung",
+    "lottery": "Lotterie-Generator",
+    "idleClicker": "Dungeon-Clicker",
+    "zigzagRunner": "Zickzack-Läufer"
   }
 }

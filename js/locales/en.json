@@ -36,6 +36,11 @@
     "strong": "Very Strong"
   },
   "recommendations": {
-    "title": "Try These Too"
+    "title": "Try These Too",
+    "shoppingCalc": "Exchange Rate Calc",
+    "detoxTimer": "Digital Detox",
+    "lottery": "Lottery Generator",
+    "idleClicker": "Dungeon Clicker",
+    "zigzagRunner": "Zigzag Runner"
   }
 }

@@ -36,6 +36,11 @@
     "strong": "Muy Fuerte"
   },
   "recommendations": {
-    "title": "También Prueba Estos"
+    "title": "También Prueba Estos",
+    "shoppingCalc": "Calculadora de Cambio",
+    "detoxTimer": "Desintoxicación Digital",
+    "lottery": "Generador de Lotería",
+    "idleClicker": "Clicker de Mazmorra",
+    "zigzagRunner": "Corredor Zigzag"
   }
 }
