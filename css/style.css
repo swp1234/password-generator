@@ -1,3 +1,20 @@
+/* Skip link for accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary, #2980b9);
+    color: #fff;
+    padding: 8px 16px;
+    z-index: 10000;
+    transition: top 0.2s;
+    font-size: 14px;
+    border-radius: 0 0 4px 0;
+}
+.skip-link:focus {
+    top: 0;
+}
+
 :root {
     --primary: #2980b9;
     --primary-dark: #1f5f8f;
@@ -895,4 +912,13 @@ input:focus-visible,
 
 [data-theme="light"] .theme-toggle:hover {
     background: rgba(41, 128, 185, 0.2);
+}
+
+/* Accessibility: reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
