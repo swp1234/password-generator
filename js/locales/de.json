@@ -42,5 +42,12 @@
     "lottery": "Lotterie-Generator",
     "idleClicker": "Dungeon-Clicker",
     "zigzagRunner": "Zickzack-Läufer"
+  },
+  "related": {
+    "title": "Mehr entdecken",
+    "qrGenerator": "QR-Generator",
+    "typingSpeed": "Tippgeschwindigkeit",
+    "devQuiz": "Entwickler-Quiz",
+    "unitConverter": "Einheitenrechner"
   }
 }

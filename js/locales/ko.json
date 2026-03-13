@@ -42,5 +42,12 @@
     "lottery": "로또 생성기",
     "idleClicker": "던전 클리커",
     "zigzagRunner": "지그재그 러너"
+  },
+  "related": {
+    "title": "더 많은 콘텐츠",
+    "qrGenerator": "QR 생성기",
+    "typingSpeed": "타이핑 속도",
+    "devQuiz": "개발자 퀴즈",
+    "unitConverter": "단위 변환기"
   }
 }

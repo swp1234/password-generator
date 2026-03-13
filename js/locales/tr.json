@@ -42,5 +42,12 @@
     "lottery": "Piyango Üreticisi",
     "idleClicker": "Zindanı Tıklayıcı",
     "zigzagRunner": "Zikzak Koşucu"
+  },
+  "related": {
+    "title": "Daha fazla keşfet",
+    "qrGenerator": "QR Oluşturucu",
+    "typingSpeed": "Yazma Hızı",
+    "devQuiz": "Geliştirici Quiz",
+    "unitConverter": "Birim Dönüştürücü"
   }
 }

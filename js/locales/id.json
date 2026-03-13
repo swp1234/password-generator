@@ -42,5 +42,12 @@
     "lottery": "Pembuat Lotere",
     "idleClicker": "Klik Dungeon",
     "zigzagRunner": "Pelari Zigzag"
+  },
+  "related": {
+    "title": "Jelajahi lainnya",
+    "qrGenerator": "Generator QR",
+    "typingSpeed": "Kecepatan Mengetik",
+    "devQuiz": "Kuis Developer",
+    "unitConverter": "Konversi Satuan"
   }
 }

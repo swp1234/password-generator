@@ -42,5 +42,12 @@
     "lottery": "Генератор лотереи",
     "idleClicker": "Кликер подземелья",
     "zigzagRunner": "Зигзаг бегун"
+  },
+  "related": {
+    "title": "Ещё интересное",
+    "qrGenerator": "QR генератор",
+    "typingSpeed": "Скорость печати",
+    "devQuiz": "Тест разработчика",
+    "unitConverter": "Конвертер единиц"
   }
 }

@@ -42,5 +42,12 @@
     "lottery": "लॉटरी जनरेटर",
     "idleClicker": "डंजन क्लिकर",
     "zigzagRunner": "जिगज़ैग रनर"
+  },
+  "related": {
+    "title": "और खोजें",
+    "qrGenerator": "QR जनरेटर",
+    "typingSpeed": "टाइपिंग स्पीड",
+    "devQuiz": "डेव क्विज़",
+    "unitConverter": "इकाई परिवर्तक"
   }
 }

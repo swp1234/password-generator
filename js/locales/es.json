@@ -42,5 +42,12 @@
     "lottery": "Generador de Lotería",
     "idleClicker": "Clicker de Mazmorra",
     "zigzagRunner": "Corredor Zigzag"
+  },
+  "related": {
+    "title": "Explora más",
+    "qrGenerator": "Generador QR",
+    "typingSpeed": "Velocidad de escritura",
+    "devQuiz": "Quiz de desarrollo",
+    "unitConverter": "Conversor de unidades"
   }
 }

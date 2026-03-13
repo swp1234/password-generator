@@ -220,14 +220,7 @@
                 <button class="clear-history-btn" id="clear-history-btn" data-i18n="buttons.clearHistory">히스토리 삭제</button>
             </div>
 
-            <!-- Related Apps -->
-            <section class="related-apps" style="margin:24px 0;padding:20px;background:rgba(255,255,255,0.05);border-radius:16px;border:1px solid rgba(255,255,255,0.1);">
-              <h3 style="font-size:16px;font-weight:700;margin-bottom:14px;color:#aaa;">🔧 관련 도구</h3>
-              <div style="display:flex;gap:10px;flex-wrap:wrap;">
-                <a href="/qr-generator/" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;text-decoration:none;color:inherit;font-size:13px;font-weight:600;">📱 QR Generator</a>
-                <a href="/color-palette/" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;text-decoration:none;color:inherit;font-size:13px;font-weight:600;">🎨 Color Palette</a>
-              </div>
-            </section>
+            <!-- Related Apps placeholder removed - moved to bottom 2x2 grid -->
         </main>
     </div>
 
@@ -244,16 +237,15 @@
         }
     </script>
     <div id="share-float" style="position:fixed;bottom:80px;right:16px;z-index:99"><button onclick="(async()=>{const u=location.href,t=document.title;if(typeof gtag==='function')gtag('event','share',{method:navigator.share?'native':'clipboard',app_name:'password-generator'});if(navigator.share){try{await navigator.share({title:t,url:u})}catch(e){}}else{await navigator.clipboard.writeText(u);this.textContent='✅';setTimeout(()=>this.textContent='📤',1500)}})()" style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:20px;cursor:pointer;backdrop-filter:blur(8px)">📤</button></div>
-    <section class="related-games" style="margin:20px auto;padding:16px;max-width:480px;background:rgba(255,255,255,0.05);border-radius:12px;">
-      <p style="font-size:13px;color:#aaa;margin:0 0 8px 0;font-weight:600;">More Free Tools</p>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        <a href="/qr-generator/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">📱 QR Generator</a>
-        <a href="/unit-converter/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">📐 Unit Converter</a>
-        <a href="/color-palette/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">🎨 Color Palette</a>
-        <a href="/shopping-calc/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">🛒 Shopping Calc</a>
-        <a href="/todo-list/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">📝 Todo List</a>
+    <div style="max-width:420px;margin:20px auto;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);">
+      <h3 data-i18n="related.title" style="font-size:16px;color:#a0a0b8;margin-bottom:12px;text-align:center;">More to Explore</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <a href="/qr-generator/" style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;"><span style="font-size:28px;">📱</span><span data-i18n="related.qrGenerator" style="font-size:12px;font-weight:600;color:#a0a0b8;">QR Generator</span></a>
+        <a href="/typing-speed/" style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;"><span style="font-size:28px;">⌨️</span><span data-i18n="related.typingSpeed" style="font-size:12px;font-weight:600;color:#a0a0b8;">Typing Speed</span></a>
+        <a href="/dev-quiz/" style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;"><span style="font-size:28px;">💻</span><span data-i18n="related.devQuiz" style="font-size:12px;font-weight:600;color:#a0a0b8;">Dev Quiz</span></a>
+        <a href="/unit-converter/" style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;"><span style="font-size:28px;">🔄</span><span data-i18n="related.unitConverter" style="font-size:12px;font-weight:600;color:#a0a0b8;">Unit Converter</span></a>
       </div>
-    </section>
+    </div>
     <script src="/portal/js/cross-promo.js" defer></script>
 </body>
 </html>

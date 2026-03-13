@@ -42,5 +42,12 @@
     "lottery": "彩票生成器",
     "idleClicker": "地下城点击器",
     "zigzagRunner": "之字形跑步者"
+  },
+  "related": {
+    "title": "探索更多",
+    "qrGenerator": "二维码生成器",
+    "typingSpeed": "打字速度",
+    "devQuiz": "开发者测验",
+    "unitConverter": "单位换算"
   }
 }

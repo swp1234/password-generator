@@ -42,5 +42,12 @@
     "lottery": "ロトジェネレータ",
     "idleClicker": "ダンジョンクリッカー",
     "zigzagRunner": "ジグザグランナー"
+  },
+  "related": {
+    "title": "もっと楽しむ",
+    "qrGenerator": "QRジェネレーター",
+    "typingSpeed": "タイピング速度",
+    "devQuiz": "開発者クイズ",
+    "unitConverter": "単位変換"
   }
 }
