@@ -49,5 +49,24 @@
     "typingSpeed": "Yazma Hızı",
     "devQuiz": "Geliştirici Quiz",
     "unitConverter": "Birim Dönüştürücü"
+  },
+  "about": {
+    "title": "Sifre Oluşturucu Hakkında",
+    "desc": "DopaBrain Şifre Oluşturucu, Web Crypto API kullanarak doğrudan tarayıcınızda güçlü, rastgele şifreler oluşturur. Tamamen ücretsiz.",
+    "howTitle": "Güvenli Şifre Nasıl Oluşturulur",
+    "howDesc": "İstediğiniz şifre uzunluğunu (8-64 karakter) ayarlayın, karakter türlerini seçin ve Oluştur'a tıklayın."
+  },
+  "faq": {
+    "title": "Sıkça Sorulan Sorular",
+    "q1": "Bu şifre oluşturucu güvenli mi?",
+    "a1": "Evet. Şifreler Web Crypto API kullanılarak tamamen tarayıcınızda oluşturulur.",
+    "q2": "Şifrem ne kadar uzun olmalı?",
+    "a2": "Genel kullanım için en az 12, hassas hesaplar için 16+ karakter öneriyoruz.",
+    "q3": "Karakterleri özelleştirebilir miyim?",
+    "a3": "Evet. Büyük harfler, küçük harfler, sayılar ve özel karakterleri bağımsız olarak değiştirebilirsiniz.",
+    "q4": "Oluşturulan şifreler saklanır mı?",
+    "a4": "Yalnızca tarayıcınızın yerel geçmişinde saklanır. Cihazınızdan asla çıkmaz.",
+    "q5": "Bir şifreyi güçlü yapan nedir?",
+    "a5": "Güçlü bir şifre uzun (12+), karışık karakter kullanır ve her hesap için benzersizdir."
   }
 }

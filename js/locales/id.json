@@ -49,5 +49,24 @@
     "typingSpeed": "Kecepatan Mengetik",
     "devQuiz": "Kuis Developer",
     "unitConverter": "Konversi Satuan"
+  },
+  "about": {
+    "title": "Tentang Generator Kata Sandi",
+    "desc": "Generator Kata Sandi DopaBrain membuat kata sandi acak yang kuat menggunakan Web Crypto API langsung di browser Anda. Sepenuhnya gratis.",
+    "howTitle": "Cara Membuat Kata Sandi yang Aman",
+    "howDesc": "Atur panjang kata sandi yang diinginkan (8-64 karakter), pilih jenis karakter, dan klik Buat."
+  },
+  "faq": {
+    "title": "Pertanyaan yang Sering Diajukan",
+    "q1": "Apakah generator kata sandi ini aman?",
+    "a1": "Ya. Kata sandi dibuat sepenuhnya di browser Anda menggunakan Web Crypto API.",
+    "q2": "Berapa panjang kata sandi saya?",
+    "a2": "Kami merekomendasikan minimal 12 karakter untuk penggunaan umum dan 16+ untuk akun sensitif.",
+    "q3": "Bisakah saya menyesuaikan karakter?",
+    "a3": "Ya. Anda dapat mengaktifkan huruf besar, kecil, angka, dan karakter khusus secara independen.",
+    "q4": "Apakah kata sandi disimpan?",
+    "a4": "Hanya disimpan di riwayat lokal browser. Tidak pernah meninggalkan perangkat Anda.",
+    "q5": "Apa yang membuat kata sandi kuat?",
+    "a5": "Kata sandi kuat panjang (12+), campuran karakter, dan unik untuk setiap akun."
   }
 }

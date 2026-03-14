@@ -49,5 +49,24 @@
     "typingSpeed": "Vitesse de frappe",
     "devQuiz": "Quiz développeur",
     "unitConverter": "Convertisseur d'unités"
+  },
+  "about": {
+    "title": "À propos du Générateur de Mots de Passe",
+    "desc": "Le Générateur de Mots de Passe DopaBrain crée des mots de passe forts et aléatoires en utilisant l'API Web Crypto directement dans votre navigateur. Entièrement gratuit.",
+    "howTitle": "Comment générer un mot de passe sécurisé",
+    "howDesc": "Définissez la longueur souhaitée (8-64 caractères), sélectionnez les types de caractères et cliquez sur Générer."
+  },
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "q1": "Ce générateur est-il sécurisé ?",
+    "a1": "Oui. Les mots de passe sont générés entièrement dans votre navigateur via l'API Web Crypto.",
+    "q2": "Quelle longueur doit avoir mon mot de passe ?",
+    "a2": "Nous recommandons au moins 12 caractères pour un usage général et 16+ pour les comptes sensibles.",
+    "q3": "Puis-je personnaliser les caractères inclus ?",
+    "a3": "Oui. Vous pouvez activer/désactiver majuscules, minuscules, chiffres et caractères spéciaux indépendamment.",
+    "q4": "Les mots de passe sont-ils sauvegardés ?",
+    "a4": "Sauvegardés uniquement dans l'historique local de votre navigateur. Ils ne quittent jamais votre appareil.",
+    "q5": "Qu'est-ce qui rend un mot de passe fort ?",
+    "a5": "Un mot de passe fort est long (12+), utilise un mélange de caractères et est unique pour chaque compte."
   }
 }

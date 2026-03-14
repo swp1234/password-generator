@@ -49,5 +49,24 @@
     "typingSpeed": "Tippgeschwindigkeit",
     "devQuiz": "Entwickler-Quiz",
     "unitConverter": "Einheitenrechner"
+  },
+  "about": {
+    "title": "Über den Passwort-Generator",
+    "desc": "Der DopaBrain Passwort-Generator erstellt starke, zufällige Passwörter mit der Web Crypto API direkt in Ihrem Browser. Völlig kostenlos.",
+    "howTitle": "So generieren Sie ein sicheres Passwort",
+    "howDesc": "Stellen Sie die gewünschte Passwortlänge (8-64 Zeichen) ein, wählen Sie die Zeichentypen und klicken Sie auf Generieren."
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Ist dieser Passwort-Generator sicher?",
+    "a1": "Ja. Passwörter werden vollständig in Ihrem Browser mit der Web Crypto API generiert.",
+    "q2": "Wie lang sollte mein Passwort sein?",
+    "a2": "Wir empfehlen mindestens 12 Zeichen für den allgemeinen Gebrauch und 16+ für sensible Konten.",
+    "q3": "Kann ich anpassen, welche Zeichen enthalten sind?",
+    "a3": "Ja. Sie können Groß-/Kleinbuchstaben, Zahlen und Sonderzeichen unabhängig umschalten.",
+    "q4": "Werden Passwörter irgendwo gespeichert?",
+    "a4": "Nur im lokalen Verlauf Ihres Browsers gespeichert. Sie verlassen niemals Ihr Gerät.",
+    "q5": "Was macht ein Passwort stark?",
+    "a5": "Ein starkes Passwort ist lang (12+), verwendet verschiedene Zeichentypen und ist für jedes Konto einzigartig."
   }
 }

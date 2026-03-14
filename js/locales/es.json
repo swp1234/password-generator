@@ -49,5 +49,24 @@
     "typingSpeed": "Velocidad de escritura",
     "devQuiz": "Quiz de desarrollo",
     "unitConverter": "Conversor de unidades"
+  },
+  "about": {
+    "title": "Acerca del Generador de Contraseñas",
+    "desc": "El Generador de Contraseñas DopaBrain crea contraseñas fuertes y aleatorias usando la API Web Crypto directamente en tu navegador. Completamente gratis.",
+    "howTitle": "Cómo generar una contraseña segura",
+    "howDesc": "Establece la longitud deseada (8-64 caracteres), selecciona los tipos de caracteres y haz clic en Generar."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿Es seguro este generador?",
+    "a1": "Sí. Las contraseñas se generan completamente en tu navegador usando la API Web Crypto.",
+    "q2": "¿Qué tan larga debe ser mi contraseña?",
+    "a2": "Recomendamos al menos 12 caracteres para uso general y 16+ para cuentas sensibles.",
+    "q3": "¿Puedo personalizar qué caracteres se incluyen?",
+    "a3": "Sí. Puedes alternar mayúsculas, minúsculas, números y caracteres especiales.",
+    "q4": "¿Se guardan las contraseñas?",
+    "a4": "Solo se guardan en el historial local de tu navegador. Nunca salen de tu dispositivo.",
+    "q5": "¿Qué hace que una contraseña sea fuerte?",
+    "a5": "Una contraseña fuerte es larga (12+), usa mezcla de caracteres y es única para cada cuenta."
   }
 }

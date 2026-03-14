@@ -96,6 +96,32 @@
       "featureList": "Random Password Generation, Customization Options, Strength Indicator, One-Click Copy, History Save, Multilingual Support"
     }
     </script>
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dopabrain.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://dopabrain.com/portal/" },
+        { "@type": "ListItem", "position": 3, "name": "Password Generator", "item": "https://dopabrain.com/password-generator/" }
+      ]
+    }
+    </script>
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Is this password generator secure?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Passwords are generated entirely in your browser using the Web Crypto API. No data is sent to any server, ensuring complete privacy and security." }},
+        { "@type": "Question", "name": "How long should my password be?", "acceptedAnswer": { "@type": "Answer", "text": "We recommend at least 12 characters for general use and 16+ characters for sensitive accounts like banking or email. Longer passwords with mixed character types are significantly harder to crack." }},
+        { "@type": "Question", "name": "Can I customize which characters are included?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can toggle uppercase letters (A-Z), lowercase letters (a-z), numbers (0-9), and special characters (!@#$%) independently to meet any password requirements." }},
+        { "@type": "Question", "name": "Are generated passwords saved anywhere?", "acceptedAnswer": { "@type": "Answer", "text": "Generated passwords are only saved in your browser's local history for convenience. They never leave your device and are not stored on any server." }},
+        { "@type": "Question", "name": "What makes a password strong?", "acceptedAnswer": { "@type": "Answer", "text": "A strong password is long (12+ characters), uses a mix of uppercase, lowercase, numbers, and special characters, and is unique for each account. Our strength meter helps you evaluate your password's security." }}
+      ]
+    }
+    </script>
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8GSWM40TV"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-J8GSWM40TV');</script>
@@ -237,6 +263,24 @@
         }
     </script>
     <div id="share-float" style="position:fixed;bottom:80px;right:16px;z-index:99"><button onclick="(async()=>{const u=location.href,t=document.title;if(typeof gtag==='function')gtag('event','share',{method:navigator.share?'native':'clipboard',app_name:'password-generator'});if(navigator.share){try{await navigator.share({title:t,url:u})}catch(e){}}else{await navigator.clipboard.writeText(u);this.textContent='✅';setTimeout(()=>this.textContent='📤',1500)}})()" style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:20px;cursor:pointer;backdrop-filter:blur(8px)">📤</button></div>
+    <!-- About Section -->
+    <section style="max-width:640px;margin:32px auto;padding:0 16px;">
+      <h2 data-i18n="about.title" style="font-size:20px;margin-bottom:12px;">About Password Generator</h2>
+      <p data-i18n="about.desc" style="font-size:14px;line-height:1.7;opacity:0.8;margin-bottom:20px;">DopaBrain Password Generator creates strong, random passwords using the Web Crypto API directly in your browser. Customize length, character types, and complexity. Features a real-time strength meter, one-click copy, and password history. No sign-up, no server storage, completely free.</p>
+      <h2 data-i18n="about.howTitle" style="font-size:18px;margin-bottom:10px;">How to Generate a Secure Password</h2>
+      <p data-i18n="about.howDesc" style="font-size:14px;line-height:1.7;opacity:0.8;margin-bottom:20px;">Set your desired password length (8-64 characters), select which character types to include, and click Generate. The strength meter shows your password's security level. Click Copy to save it to your clipboard instantly.</p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section style="max-width:640px;margin:24px auto;padding:0 16px;">
+      <h2 data-i18n="faq.title" style="font-size:20px;margin-bottom:16px;">Frequently Asked Questions</h2>
+      <details style="margin-bottom:10px;"><summary data-i18n="faq.q1" style="cursor:pointer;font-weight:600;padding:10px 0;">Is this password generator secure?</summary><p data-i18n="faq.a1" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Yes. Passwords are generated entirely in your browser using the Web Crypto API. No data is sent to any server, ensuring complete privacy and security.</p></details>
+      <details style="margin-bottom:10px;"><summary data-i18n="faq.q2" style="cursor:pointer;font-weight:600;padding:10px 0;">How long should my password be?</summary><p data-i18n="faq.a2" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">We recommend at least 12 characters for general use and 16+ characters for sensitive accounts like banking or email.</p></details>
+      <details style="margin-bottom:10px;"><summary data-i18n="faq.q3" style="cursor:pointer;font-weight:600;padding:10px 0;">Can I customize which characters are included?</summary><p data-i18n="faq.a3" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Yes. You can toggle uppercase letters, lowercase letters, numbers, and special characters independently to meet any password requirements.</p></details>
+      <details style="margin-bottom:10px;"><summary data-i18n="faq.q4" style="cursor:pointer;font-weight:600;padding:10px 0;">Are generated passwords saved anywhere?</summary><p data-i18n="faq.a4" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Generated passwords are only saved in your browser's local history for convenience. They never leave your device and are not stored on any server.</p></details>
+      <details style="margin-bottom:10px;"><summary data-i18n="faq.q5" style="cursor:pointer;font-weight:600;padding:10px 0;">What makes a password strong?</summary><p data-i18n="faq.a5" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">A strong password is long (12+ characters), uses a mix of uppercase, lowercase, numbers, and special characters, and is unique for each account.</p></details>
+    </section>
+
     <div style="max-width:420px;margin:20px auto;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);">
       <h3 data-i18n="related.title" style="font-size:16px;color:#a0a0b8;margin-bottom:12px;text-align:center;">More to Explore</h3>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">

@@ -49,5 +49,24 @@
     "typingSpeed": "Velocidade de digitação",
     "devQuiz": "Quiz de programação",
     "unitConverter": "Conversor de unidades"
+  },
+  "about": {
+    "title": "Sobre o Gerador de Senhas",
+    "desc": "O Gerador de Senhas DopaBrain cria senhas fortes e aleatórias usando a API Web Crypto diretamente no seu navegador. Totalmente grátis.",
+    "howTitle": "Como gerar uma senha segura",
+    "howDesc": "Defina o comprimento desejado (8-64 caracteres), selecione os tipos de caracteres e clique em Gerar."
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "q1": "Este gerador de senhas é seguro?",
+    "a1": "Sim. As senhas são geradas inteiramente no seu navegador usando a API Web Crypto.",
+    "q2": "Qual deve ser o comprimento da minha senha?",
+    "a2": "Recomendamos pelo menos 12 caracteres para uso geral e 16+ para contas sensíveis.",
+    "q3": "Posso personalizar quais caracteres são incluídos?",
+    "a3": "Sim. Você pode alternar maiúsculas, minúsculas, números e caracteres especiais.",
+    "q4": "As senhas geradas são salvas?",
+    "a4": "São salvas apenas no histórico local do navegador. Nunca saem do seu dispositivo.",
+    "q5": "O que torna uma senha forte?",
+    "a5": "Uma senha forte é longa (12+), usa mistura de caracteres e é única para cada conta."
   }
 }
