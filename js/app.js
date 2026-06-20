@@ -244,7 +244,7 @@ class PasswordGenerator {
                 setTimeout(() => feedback.classList.remove('show'), 2000);
             }
 
-            // Haptic feedback if available
+            // Vibrate feedback if available
             if (navigator.vibrate) {
                 navigator.vibrate([100, 50, 100]);
             }
