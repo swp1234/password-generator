@@ -7,7 +7,7 @@ class PasswordGenerator {
 
     async init() {
         try {
-            await i18n.loadTranslations(i18n.currentLang);
+            await i18n.setLanguage(i18n.currentLang);
         } catch (e) {
             console.warn('i18n init failed:', e);
         }
