@@ -45,10 +45,10 @@
   },
   "related": {
     "title": "More to Explore",
-    "qrGenerator": "QR Generator",
-    "typingSpeed": "Typing Speed",
-    "devQuiz": "Dev Quiz",
-    "unitConverter": "Unit Converter"
+    "unitConverter": "Unit Converter",
+    "ddayCounter": "D-Day Counter",
+    "bmiCalculator": "BMI Calculator",
+    "futureSelf": "Future Self"
   },
   "about": {
     "title": "About Password Generator",

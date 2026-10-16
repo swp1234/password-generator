@@ -45,10 +45,10 @@
   },
   "related": {
     "title": "もっと楽しむ",
-    "qrGenerator": "QRジェネレーター",
-    "typingSpeed": "タイピング速度",
-    "devQuiz": "開発者クイズ",
-    "unitConverter": "単位変換"
+    "unitConverter": "単位変換",
+    "ddayCounter": "D-Dayカウンター",
+    "bmiCalculator": "BMI計算機",
+    "futureSelf": "未来の自分"
   },
   "about": {
     "title": "パスワードジェネレーターについて",

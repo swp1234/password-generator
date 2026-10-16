@@ -45,10 +45,10 @@
   },
   "related": {
     "title": "À découvrir",
-    "qrGenerator": "Générateur QR",
-    "typingSpeed": "Vitesse de frappe",
-    "devQuiz": "Quiz développeur",
-    "unitConverter": "Convertisseur d'unités"
+    "unitConverter": "Convertisseur d'unités",
+    "ddayCounter": "Compteur de Jour J",
+    "bmiCalculator": "Calculateur d'IMC",
+    "futureSelf": "Soi Futur"
   },
   "about": {
     "title": "À propos du Générateur de Mots de Passe",

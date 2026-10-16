@@ -45,10 +45,10 @@
   },
   "related": {
     "title": "और खोजें",
-    "qrGenerator": "QR जनरेटर",
-    "typingSpeed": "टाइपिंग स्पीड",
-    "devQuiz": "डेव क्विज़",
-    "unitConverter": "इकाई परिवर्तक"
+    "unitConverter": "इकाई परिवर्तक",
+    "ddayCounter": "डी-डे काउंटर",
+    "bmiCalculator": "बीएमआई कैलकुलेटर",
+    "futureSelf": "भविष्य का आत्म"
   },
   "about": {
     "title": "पासवर्ड जनरेटर के बारे में",

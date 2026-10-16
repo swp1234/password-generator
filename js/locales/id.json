@@ -45,10 +45,10 @@
   },
   "related": {
     "title": "Jelajahi lainnya",
-    "qrGenerator": "Generator QR",
-    "typingSpeed": "Kecepatan Mengetik",
-    "devQuiz": "Kuis Developer",
-    "unitConverter": "Konversi Satuan"
+    "unitConverter": "Konversi Satuan",
+    "ddayCounter": "Penghitung Hari",
+    "bmiCalculator": "Kalkulator BMI",
+    "futureSelf": "Diri Masa Depan"
   },
   "about": {
     "title": "Tentang Generator Kata Sandi",

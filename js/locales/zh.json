@@ -45,10 +45,10 @@
   },
   "related": {
     "title": "探索更多",
-    "qrGenerator": "二维码生成器",
-    "typingSpeed": "打字速度",
-    "devQuiz": "开发者测验",
-    "unitConverter": "单位换算"
+    "unitConverter": "单位换算",
+    "ddayCounter": "倒计时计数器",
+    "bmiCalculator": "BMI计算器",
+    "futureSelf": "未来自画像"
   },
   "about": {
     "title": "关于密码生成器",

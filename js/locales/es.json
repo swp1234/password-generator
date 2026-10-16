@@ -45,10 +45,10 @@
   },
   "related": {
     "title": "Explora más",
-    "qrGenerator": "Generador QR",
-    "typingSpeed": "Velocidad de escritura",
-    "devQuiz": "Quiz de desarrollo",
-    "unitConverter": "Conversor de unidades"
+    "unitConverter": "Conversor de unidades",
+    "ddayCounter": "Contador D-Day",
+    "bmiCalculator": "Calculadora de IMC",
+    "futureSelf": "Yo Futuro"
   },
   "about": {
     "title": "Acerca del Generador de Contraseñas",

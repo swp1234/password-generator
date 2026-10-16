@@ -45,10 +45,10 @@
   },
   "related": {
     "title": "Mehr entdecken",
-    "qrGenerator": "QR-Generator",
-    "typingSpeed": "Tippgeschwindigkeit",
-    "devQuiz": "Entwickler-Quiz",
-    "unitConverter": "Einheitenrechner"
+    "unitConverter": "Einheitenrechner",
+    "ddayCounter": "Stichtag-Zähler",
+    "bmiCalculator": "BMI-Rechner",
+    "futureSelf": "Zukunfts-Ich"
   },
   "about": {
     "title": "Über den Passwort-Generator",

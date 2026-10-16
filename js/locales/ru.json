@@ -45,10 +45,10 @@
   },
   "related": {
     "title": "Ещё интересное",
-    "qrGenerator": "QR генератор",
-    "typingSpeed": "Скорость печати",
-    "devQuiz": "Тест разработчика",
-    "unitConverter": "Конвертер единиц"
+    "unitConverter": "Конвертер единиц",
+    "ddayCounter": "Счетчик дней",
+    "bmiCalculator": "Калькулятор ИМТ",
+    "futureSelf": "Будущее я"
   },
   "about": {
     "title": "О генераторе паролей",
