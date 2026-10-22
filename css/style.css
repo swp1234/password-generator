@@ -451,9 +451,11 @@ body {
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    padding: 10px;
+    padding: 10px 12px;
+    min-height: 44px;
     border-radius: 8px;
     transition: background 0.2s ease;
+    touch-action: manipulation;
 }
 
 .option-checkbox:hover {
@@ -759,7 +761,8 @@ body {
     }
 
     .option-checkbox {
-        padding: 8px;
+        padding: 8px 12px;
+        min-height: 44px;
     }
 
     .checkbox-label {
