@@ -938,3 +938,54 @@ input:focus-visible,
         transition-duration: 0.01ms !important;
     }
 }
+
+
+/* Related Apps Grid */
+.related-tests {
+    max-width: 420px;
+    margin: 20px auto;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+.related-tests h3 {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    text-align: center;
+}
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+.related-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    min-width: 44px;
+    box-sizing: border-box;
+    touch-action: manipulation;
+    gap: 6px;
+    padding: 14px 8px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: transform 0.2s, border-color 0.2s;
+}
+.related-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary-color);
+}
+.related-emoji {
+    font-size: 28px;
+}
+.related-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-align: center;
+}

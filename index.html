@@ -164,10 +164,7 @@
         </div>
     </div>
 
-    <!-- Top Banner Ad -->
-    <div class="ad-container ad-top">
-        <div class="ad-placeholder" data-i18n="ads.banner">광고 영역</div>
-    </div>
+
 
     <div class="app-container">
         <!-- Header -->
@@ -256,10 +253,7 @@
         </main>
     </div>
 
-    <!-- Bottom Banner Ad -->
-    <div class="ad-container ad-bottom">
-        <div class="ad-placeholder" data-i18n="ads.banner">광고 영역</div>
-    </div>
+
 
     <script src="js/i18n.js"></script>
     <script src="js/app.js"></script>
@@ -287,13 +281,13 @@
       <details style="margin-bottom:10px;"><summary data-i18n="faq.q5" style="cursor:pointer;font-weight:600;padding:10px 0;">What makes a password strong?</summary><p data-i18n="faq.a5" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">A strong password is long (12+ characters), uses a mix of uppercase, lowercase, numbers, and special characters, and is unique for each account.</p></details>
     </section>
 
-    <div style="max-width:420px;margin:20px auto;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);">
-      <h3 data-i18n="related.title" style="font-size:16px;color:#a0a0b8;margin-bottom:12px;text-align:center;">More to Explore</h3>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-        <a href="/dday-counter/" style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;"><span style="font-size:28px;">📅</span><span data-i18n="related.ddayCounter" style="font-size:12px;font-weight:600;color:#a0a0b8;">D-Day Counter</span></a>
-        <a href="/bmi-calculator/" style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;"><span style="font-size:28px;">📏</span><span data-i18n="related.bmiCalculator" style="font-size:12px;font-weight:600;color:#a0a0b8;">BMI Calculator</span></a>
-        <a href="/future-self/" style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;"><span style="font-size:28px;">⏳</span><span data-i18n="related.futureSelf" style="font-size:12px;font-weight:600;color:#a0a0b8;">Future Self</span></a>
-        <a href="/unit-converter/" style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;"><span style="font-size:28px;">🔄</span><span data-i18n="related.unitConverter" style="font-size:12px;font-weight:600;color:#a0a0b8;">Unit Converter</span></a>
+        <div class="related-tests">
+      <h3 data-i18n="related.title">More to Explore</h3>
+      <div class="related-grid" id="related-grid">
+        <a href="/dday-counter/" data-base-href="/dday-counter/" class="related-card"><span class="related-emoji">📅</span><span class="related-name" data-i18n="related.ddayCounter">D-Day Counter</span></a>
+        <a href="/bmi-calculator/" data-base-href="/bmi-calculator/" class="related-card"><span class="related-emoji">📏</span><span class="related-name" data-i18n="related.bmiCalculator">BMI Calculator</span></a>
+        <a href="/future-self/" data-base-href="/future-self/" class="related-card"><span class="related-emoji">⏳</span><span class="related-name" data-i18n="related.futureSelf">Future Self</span></a>
+        <a href="/unit-converter/" data-base-href="/unit-converter/" class="related-card"><span class="related-emoji">🔄</span><span class="related-name" data-i18n="related.unitConverter">Unit Converter</span></a>
       </div>
     </div>
     <script src="/portal/js/cross-promo.js" defer></script>
