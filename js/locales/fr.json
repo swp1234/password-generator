@@ -106,5 +106,8 @@
         "url": "https://www.amazon.com/dp/0316380504?tag=dopabrain-20"
       }
     ]
+  },
+  "accessibility": {
+    "skipToMain": "Aller au contenu principal"
   }
 }

@@ -361,11 +361,24 @@ class PasswordGenerator {
     }
 
     clearHistory() {
-        if (confirm(i18n.t('messages.confirmClear'))) {
-            this.history = [];
-            this.saveHistory();
-            this.updateHistoryUI();
+        const btn = document.getElementById('clear-history-btn');
+        if (!this.clearConfirmPending) {
+            this.clearConfirmPending = true;
+            this.showToast(this.tr('messages.confirmClear', 'Tap again to clear history'));
+            if (btn) btn.dataset.confirm = 'pending';
+            clearTimeout(this.clearConfirmTimer);
+            this.clearConfirmTimer = setTimeout(() => {
+                this.clearConfirmPending = false;
+                if (btn) delete btn.dataset.confirm;
+            }, 3500);
+            return;
         }
+        clearTimeout(this.clearConfirmTimer);
+        this.clearConfirmPending = false;
+        if (btn) delete btn.dataset.confirm;
+        this.history = [];
+        this.saveHistory();
+        this.updateHistoryUI();
     }
 
     tr(key, fallback) {
