@@ -252,23 +252,40 @@ class PasswordGenerator {
         };
     }
 
+    async writeClipboardText(text) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (e) {}
+        }
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        let ok = false;
+        try { ok = document.execCommand('copy'); } catch (e) {}
+        ta.remove();
+        return ok;
+    }
+
+    showCopyFeedback() {
+        const feedback = document.getElementById('copy-feedback');
+        if (feedback) {
+            feedback.classList.add('show');
+            setTimeout(() => feedback.classList.remove('show'), 2000);
+        }
+    }
+
     async copyToClipboard() {
-        try {
-            await navigator.clipboard.writeText(this.currentPassword);
-
-            // Show feedback
-            const feedback = document.getElementById('copy-feedback');
-            if (feedback) {
-                feedback.classList.add('show');
-                setTimeout(() => feedback.classList.remove('show'), 2000);
-            }
-
-            // Vibrate feedback if available
+        const copied = await this.writeClipboardText(this.currentPassword);
+        if (copied) {
+            this.showCopyFeedback();
             if (navigator.vibrate) {
                 navigator.vibrate([100, 50, 100]);
             }
-        } catch (err) {
-            console.error('Failed to copy:', err);
         }
     }
 
@@ -345,12 +362,8 @@ class PasswordGenerator {
         copyBtn.textContent = '📋';
         copyBtn.title = i18n.t('buttons.copy');
         copyBtn.addEventListener('click', async () => {
-            await navigator.clipboard.writeText(password);
-
-            const feedback = document.getElementById('copy-feedback');
-            if (feedback) {
-                feedback.classList.add('show');
-                setTimeout(() => feedback.classList.remove('show'), 2000);
+            if (await this.writeClipboardText(password)) {
+                this.showCopyFeedback();
             }
         });
 
@@ -410,18 +423,7 @@ class PasswordGenerator {
     async copyShareUrl(methodLabel = 'clipboard') {
         const shareUrl = this.getShareUrl();
         const copied = this.tr('share.copiedUrl', 'Tool link copied!');
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-            try { await navigator.clipboard.writeText(shareUrl); } catch (e) {}
-        } else {
-            const ta = document.createElement('textarea');
-            ta.value = shareUrl;
-            ta.style.position = 'fixed';
-            ta.style.opacity = '0';
-            document.body.appendChild(ta);
-            ta.select();
-            try { document.execCommand('copy'); } catch (e) {}
-            ta.remove();
-        }
+        await this.writeClipboardText(shareUrl);
         this.showToast(copied);
         if (typeof gtag === 'function') {
             gtag('event', 'share', {
