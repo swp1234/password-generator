@@ -7,7 +7,7 @@
     <meta name="robots" content="max-image-preview:large">
     <meta name="theme-color" content="#2980b9">
     <meta name="description" content="Generate strong, secure random passwords instantly. Customize length, characters & complexity. One-click copy with strength meter. Try free!">
-    <meta name="dateModified" content="2026-11-07">
+    <meta name="dateModified" content="2026-11-15">
     <meta name="keywords" content="비밀번호 생성기, 랜덤 패스워드, 암호 생성, 보안, 강력한 비밀번호">
     <title>Password Generator - Free Strong Password Creator | DopaBrain</title>
     <link rel="canonical" href="https://dopabrain.com/password-generator/">
@@ -44,18 +44,18 @@
     <meta name="twitter:image" content="https://dopabrain.com/portal/img/og/password-generator.png">
     <meta name="twitter:site" content="@dopabrain">
     <!-- hreflang for multilingual SEO -->
-    <link rel="alternate" hreflang="ko" href="https://dopabrain.com/password-generator/">
-    <link rel="alternate" hreflang="en" href="https://dopabrain.com/password-generator/">
-    <link rel="alternate" hreflang="zh" href="https://dopabrain.com/password-generator/">
-    <link rel="alternate" hreflang="hi" href="https://dopabrain.com/password-generator/">
-    <link rel="alternate" hreflang="ru" href="https://dopabrain.com/password-generator/">
-    <link rel="alternate" hreflang="ja" href="https://dopabrain.com/password-generator/">
-    <link rel="alternate" hreflang="es" href="https://dopabrain.com/password-generator/">
-    <link rel="alternate" hreflang="pt" href="https://dopabrain.com/password-generator/">
-    <link rel="alternate" hreflang="id" href="https://dopabrain.com/password-generator/">
-    <link rel="alternate" hreflang="tr" href="https://dopabrain.com/password-generator/">
-    <link rel="alternate" hreflang="de" href="https://dopabrain.com/password-generator/">
-    <link rel="alternate" hreflang="fr" href="https://dopabrain.com/password-generator/">
+    <link rel="alternate" hreflang="ko" href="https://dopabrain.com/password-generator/?lang=ko">
+    <link rel="alternate" hreflang="en" href="https://dopabrain.com/password-generator/?lang=en">
+    <link rel="alternate" hreflang="zh" href="https://dopabrain.com/password-generator/?lang=zh">
+    <link rel="alternate" hreflang="hi" href="https://dopabrain.com/password-generator/?lang=hi">
+    <link rel="alternate" hreflang="ru" href="https://dopabrain.com/password-generator/?lang=ru">
+    <link rel="alternate" hreflang="ja" href="https://dopabrain.com/password-generator/?lang=ja">
+    <link rel="alternate" hreflang="es" href="https://dopabrain.com/password-generator/?lang=es">
+    <link rel="alternate" hreflang="pt" href="https://dopabrain.com/password-generator/?lang=pt">
+    <link rel="alternate" hreflang="id" href="https://dopabrain.com/password-generator/?lang=id">
+    <link rel="alternate" hreflang="tr" href="https://dopabrain.com/password-generator/?lang=tr">
+    <link rel="alternate" hreflang="de" href="https://dopabrain.com/password-generator/?lang=de">
+    <link rel="alternate" hreflang="fr" href="https://dopabrain.com/password-generator/?lang=fr">
     <link rel="alternate" hreflang="x-default" href="https://dopabrain.com/password-generator/">
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -238,6 +238,13 @@
 
                 <!-- Generate Button -->
                 <button class="generate-btn" id="generate-btn" data-i18n="buttons.generate">새로 생성</button>
+
+                <!-- Share & Story Card -->
+                <div class="pwd-share-bar">
+                    <button type="button" class="pwd-action-btn" id="saveCardBtn" data-i18n="share.saveCard">Save Security Card</button>
+                    <button type="button" class="pwd-action-btn" id="shareTwitterBtn" data-i18n="share.shareX">Share on X</button>
+                    <button type="button" class="pwd-action-btn" id="shareUrlBtn" data-i18n="share.shareUrl">Copy Link</button>
+                </div>
             </div>
 
             <!-- Password History Section -->
@@ -248,6 +255,9 @@
                 </div>
                 <button class="clear-history-btn" id="clear-history-btn" data-i18n="buttons.clearHistory">히스토리 삭제</button>
             </div>
+
+            <section id="curated-resources-card" class="curated-resources-card" aria-label="Digital Security Guides"></section>
+            <canvas id="shareCanvas" width="1080" height="1920" style="display:none;"></canvas>
 
             <!-- Related Apps placeholder removed - moved to bottom 2x2 grid -->
         </main>
@@ -262,7 +272,7 @@
             navigator.serviceWorker.register('sw.js').catch(e => console.log('SW error:', e));
         }
     </script>
-    <div id="share-float" style="position:fixed;bottom:80px;right:16px;z-index:99"><button onclick="(async()=>{const u=location.href,t=document.title;if(typeof gtag==='function')gtag('event','share',{method:navigator.share?'native':'clipboard',app_name:'password-generator'});if(navigator.share){try{await navigator.share({title:t,url:u})}catch(e){}}else{await navigator.clipboard.writeText(u);this.textContent='✅';setTimeout(()=>this.textContent='📤',1500)}})()" style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:20px;cursor:pointer;backdrop-filter:blur(8px)">📤</button></div>
+    <div id="share-float" style="position:fixed;bottom:80px;right:16px;z-index:99"><button type="button" id="share-float-btn" aria-label="Share Password Generator" style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:20px;cursor:pointer;backdrop-filter:blur(8px)">📤</button></div>
     <!-- About Section -->
     <section style="max-width:640px;margin:32px auto;padding:0 16px;">
       <h2 data-i18n="about.title" style="font-size:20px;margin-bottom:12px;">About Password Generator</h2>
@@ -274,11 +284,11 @@
     <!-- FAQ Section -->
     <section style="max-width:640px;margin:24px auto;padding:0 16px;">
       <h2 data-i18n="faq.title" style="font-size:20px;margin-bottom:16px;">Frequently Asked Questions</h2>
-      <details style="margin-bottom:10px;"><summary data-i18n="faq.q1" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">Is this password generator secure?</summary><p data-i18n="faq.a1" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Yes. Passwords are generated entirely in your browser using the Web Crypto API. No data is sent to any server, ensuring complete privacy and security.</p></details>
-      <details style="margin-bottom:10px;"><summary data-i18n="faq.q2" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">How long should my password be?</summary><p data-i18n="faq.a2" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">We recommend at least 12 characters for general use and 16+ characters for sensitive accounts like banking or email.</p></details>
-      <details style="margin-bottom:10px;"><summary data-i18n="faq.q3" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">Can I customize which characters are included?</summary><p data-i18n="faq.a3" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Yes. You can toggle uppercase letters, lowercase letters, numbers, and special characters independently to meet any password requirements.</p></details>
-      <details style="margin-bottom:10px;"><summary data-i18n="faq.q4" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">Are generated passwords saved anywhere?</summary><p data-i18n="faq.a4" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Generated passwords are only saved in your browser's local history for convenience. They never leave your device and are not stored on any server.</p></details>
-      <details style="margin-bottom:10px;"><summary data-i18n="faq.q5" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">What makes a password strong?</summary><p data-i18n="faq.a5" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">A strong password is long (12+ characters), uses a mix of uppercase, lowercase, numbers, and special characters, and is unique for each account.</p></details>
+      <details open style="margin-bottom:10px;"><summary data-i18n="faq.q1" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">Is this password generator secure?</summary><p data-i18n="faq.a1" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Yes. Passwords are generated entirely in your browser using the Web Crypto API. No data is sent to any server, ensuring complete privacy and security.</p></details>
+      <details open style="margin-bottom:10px;"><summary data-i18n="faq.q2" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">How long should my password be?</summary><p data-i18n="faq.a2" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">We recommend at least 12 characters for general use and 16+ characters for sensitive accounts like banking or email.</p></details>
+      <details open style="margin-bottom:10px;"><summary data-i18n="faq.q3" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">Can I customize which characters are included?</summary><p data-i18n="faq.a3" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Yes. You can toggle uppercase letters, lowercase letters, numbers, and special characters independently to meet any password requirements.</p></details>
+      <details open style="margin-bottom:10px;"><summary data-i18n="faq.q4" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">Are generated passwords saved anywhere?</summary><p data-i18n="faq.a4" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Generated passwords are only saved in your browser's local history for convenience. They never leave your device and are not stored on any server.</p></details>
+      <details open style="margin-bottom:10px;"><summary data-i18n="faq.q5" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">What makes a password strong?</summary><p data-i18n="faq.a5" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">A strong password is long (12+ characters), uses a mix of uppercase, lowercase, numbers, and special characters, and is unique for each account.</p></details>
     </section>
 
         <div class="related-tests">

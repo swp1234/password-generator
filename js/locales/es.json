@@ -68,5 +68,43 @@
     "a4": "Solo se guardan en el historial local de tu navegador. Nunca salen de tu dispositivo.",
     "q5": "¿Qué hace que una contraseña sea fuerte?",
     "a5": "Una contraseña fuerte es larga (12+), usa mezcla de caracteres y es única para cada cuenta."
+  },
+  "share": {
+    "saveCard": "Guardar Tarjeta",
+    "savingCard": "Creando...",
+    "savedCard": "¡Tarjeta de seguridad guardada!",
+    "shareX": "Compartir en X",
+    "shareUrl": "Copiar enlace",
+    "copiedUrl": "¡Enlace copiado!",
+    "tweetText": "Generando contraseñas seguras localmente con Web Crypto API en DopaBrain Password Generator.",
+    "cardBadge": "DOPABRAIN SEGURIDAD",
+    "cardTitle": "Perfil de Seguridad",
+    "cardSubtitle": "Verificación local con Web Crypto API",
+    "cardStrengthLabel": "NIVEL DE SEGURIDAD",
+    "cardPrivacyLabel": "PRIVACIDAD",
+    "cardPrivacyValue": "100% Local en tu navegador",
+    "cardCta": "Gratis en dopabrain.com/password-generator"
+  },
+  "curated": {
+    "title": "Guías de Seguridad Digital",
+    "subtitle": "Lecturas clave sobre cifrado, contraseñas sólidas y privacidad en línea",
+    "badge": "Libro",
+    "affiliateNote": "Incluye enlaces de referencia que apoyan las herramientas gratuitas de DopaBrain.",
+    "books": [
+      {
+        "id": "data-and-goliath",
+        "title": "Data and Goliath",
+        "author": "Bruce Schneier",
+        "note": "Referencia esencial sobre privacidad, cifrado y defensa digital.",
+        "url": "https://www.amazon.com/dp/039335217X?tag=dopabrain-20"
+      },
+      {
+        "id": "art-of-invisibility",
+        "title": "El Arte de la Invisibilidad (The Art of Invisibility)",
+        "author": "Kevin Mitnick",
+        "note": "Hábitos prácticos de higiene de contraseñas y protección de cuentas.",
+        "url": "https://www.amazon.com/dp/0316380504?tag=dopabrain-20"
+      }
+    ]
   }
 }

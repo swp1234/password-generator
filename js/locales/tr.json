@@ -68,5 +68,43 @@
     "a4": "Yalnızca tarayıcınızın yerel geçmişinde saklanır. Cihazınızdan asla çıkmaz.",
     "q5": "Bir şifreyi güçlü yapan nedir?",
     "a5": "Güçlü bir şifre uzun (12+), karışık karakter kullanır ve her hesap için benzersizdir."
+  },
+  "share": {
+    "saveCard": "Güvenlik Kartını Kaydet",
+    "savingCard": "Oluşturuluyor...",
+    "savedCard": "Güvenlik kartı kaydedildi!",
+    "shareX": "X'te Paylaş",
+    "shareUrl": "Bağlantıyı Kopyala",
+    "copiedUrl": "Bağlantı kopyalandı!",
+    "tweetText": "DopaBrain Şifre Oluşturucu ile tarayıcıda yerel Web Crypto API kullanarak güçlü şifreler üretin.",
+    "cardBadge": "DOPABRAIN GÜVENLİK",
+    "cardTitle": "Şifre Güvenlik Profili",
+    "cardSubtitle": "Yerel Web Crypto entropi kontrolü",
+    "cardStrengthLabel": "GÜÇ DÜZEYİ",
+    "cardPrivacyLabel": "GİZLİLİK GARANTİSİ",
+    "cardPrivacyValue": "100% Tarayıcı İçi Yerel Üretim",
+    "cardCta": "Ücretsiz: dopabrain.com/password-generator"
+  },
+  "curated": {
+    "title": "Dijital Güvenlik ve Gizlilik Rehberleri",
+    "subtitle": "Şifreleme, parola hijyeni ve hesap koruması üzerine temel kitaplar",
+    "badge": "Kitap",
+    "affiliateNote": "DopaBrain ücretsiz araçlarını destekleyen kitap yönlendirme bağlantıları içerir.",
+    "books": [
+      {
+        "id": "data-and-goliath",
+        "title": "Data and Goliath",
+        "author": "Bruce Schneier",
+        "note": "Dijital dünyada gizlilik ve veri güvenliğini korumanın temel ilkeleri.",
+        "url": "https://www.amazon.com/dp/039335217X?tag=dopabrain-20"
+      },
+      {
+        "id": "art-of-invisibility",
+        "title": "Görünmezlik Sanatı (The Art of Invisibility)",
+        "author": "Kevin Mitnick",
+        "note": "Güçlü parola yönetimi ve çevrimiçi hesap koruma alışkanlıkları.",
+        "url": "https://www.amazon.com/dp/0316380504?tag=dopabrain-20"
+      }
+    ]
   }
 }

@@ -68,5 +68,43 @@
     "a4": "Hanya disimpan di riwayat lokal browser. Tidak pernah meninggalkan perangkat Anda.",
     "q5": "Apa yang membuat kata sandi kuat?",
     "a5": "Kata sandi kuat panjang (12+), campuran karakter, dan unik untuk setiap akun."
+  },
+  "share": {
+    "saveCard": "Simpan Kartu Keamanan",
+    "savingCard": "Membuat...",
+    "savedCard": "Kartu keamanan tersimpan!",
+    "shareX": "Bagikan ke X",
+    "shareUrl": "Salin Tautan",
+    "copiedUrl": "Tautan disalin!",
+    "tweetText": "Membuat kata sandi kuat secara lokal dengan Web Crypto API di DopaBrain Password Generator.",
+    "cardBadge": "DOPABRAIN KEAMANAN",
+    "cardTitle": "Profil Keamanan Sandi",
+    "cardSubtitle": "Entropi Web Crypto lokal di browser",
+    "cardStrengthLabel": "TINGKAT KEKUATAN",
+    "cardPrivacyLabel": "JAMINAN PRIVASI",
+    "cardPrivacyValue": "100% Lokal di Perangkat",
+    "cardCta": "Gratis di dopabrain.com/password-generator"
+  },
+  "curated": {
+    "title": "Panduan Keamanan & Privasi Digital",
+    "subtitle": "Buku rujukan mengenai enkripsi, keamanan sandi, dan perlindungan akun",
+    "badge": "Buku",
+    "affiliateNote": "Memuat tautan referensi buku untuk mendukung alat gratis DopaBrain.",
+    "books": [
+      {
+        "id": "data-and-goliath",
+        "title": "Data and Goliath",
+        "author": "Bruce Schneier",
+        "note": "Panduan penting memahami keamanan siber dan perlindungan privasi pribadi.",
+        "url": "https://www.amazon.com/dp/039335217X?tag=dopabrain-20"
+      },
+      {
+        "id": "art-of-invisibility",
+        "title": "The Art of Invisibility",
+        "author": "Kevin Mitnick",
+        "note": "Kebiasaan praktis menjaga kebersihan sandi dan autentikasi akun.",
+        "url": "https://www.amazon.com/dp/0316380504?tag=dopabrain-20"
+      }
+    ]
   }
 }

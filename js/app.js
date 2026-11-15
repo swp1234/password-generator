@@ -13,9 +13,10 @@ class PasswordGenerator {
         }
 
         this.setupEventListeners();
-        this.generateNewPassword();
+        this.generateNewPassword(false);
         this.updateHistoryUI();
         this.setupLanguageSelector();
+        this.renderCuratedResources();
         initRelatedFunnels();
 
         const loader = document.getElementById('app-loader');
@@ -28,7 +29,13 @@ class PasswordGenerator {
     setupEventListeners() {
         // Generate button
         const generateBtn = document.getElementById('generate-btn');
-        if (generateBtn) generateBtn.addEventListener('click', () => this.generateNewPassword());
+        if (generateBtn) generateBtn.addEventListener('click', () => this.generateNewPassword(true));
+
+        // Share & Story card buttons
+        document.getElementById('saveCardBtn')?.addEventListener('click', () => this.generateStoryCard());
+        document.getElementById('shareTwitterBtn')?.addEventListener('click', () => this.shareOnX());
+        document.getElementById('shareUrlBtn')?.addEventListener('click', () => this.copyShareUrl('button'));
+        document.getElementById('share-float-btn')?.addEventListener('click', () => this.shareNativeOrCopy());
 
         // Copy button
         const copyBtn = document.getElementById('copy-btn');
@@ -44,14 +51,20 @@ class PasswordGenerator {
             lengthSlider.addEventListener('input', (e) => {
                 const value = e.target.value;
                 document.getElementById('length-value').textContent = value;
-                this.generateNewPassword();
+                this.generateNewPassword(true);
             });
         }
 
         // Checkboxes
         const checkboxes = document.querySelectorAll('.option-checkbox input[type="checkbox"]');
         checkboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', () => this.generateNewPassword());
+            checkbox.addEventListener('change', () => {
+                const checkedCount = Array.from(checkboxes).filter(cb => cb.checked).length;
+                if (checkedCount === 0) {
+                    checkbox.checked = true;
+                }
+                this.generateNewPassword(true);
+            });
         });
 
         // Clear history button
@@ -59,17 +72,6 @@ class PasswordGenerator {
         if (clearHistoryBtn) {
             clearHistoryBtn.addEventListener('click', () => this.clearHistory());
         }
-
-        // Ensure at least one character type is selected
-        checkboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', () => {
-                const checkedCount = Array.from(checkboxes).filter(cb => cb.checked).length;
-                if (checkedCount === 0) {
-                    checkbox.checked = true;
-                    this.generateNewPassword();
-                }
-            });
-        });
     }
 
     setupLanguageSelector() {
@@ -96,8 +98,10 @@ class PasswordGenerator {
                 // Close menu
                 langMenu.classList.add('hidden');
 
-                // Regenerate password
-                this.generateNewPassword();
+                // Refresh UI, curated books & related links without synthetic tracking
+                this.generateNewPassword(false);
+                this.renderCuratedResources();
+                initRelatedFunnels();
             });
         });
 
@@ -127,7 +131,7 @@ class PasswordGenerator {
         return selected || uppercase;
     }
 
-    generateNewPassword() {
+    generateNewPassword(isUserAction = true) {
         const length = parseInt(document.getElementById('length-slider').value);
         const characters = this.getCharacterSets();
 
@@ -143,6 +147,20 @@ class PasswordGenerator {
         this.displayPassword(password);
         this.updateStrengthIndicator(password);
         this.addToHistory(password);
+
+        if (isUserAction && typeof gtag === 'function') {
+            const strength = this.calculateStrength(password);
+            const lang = i18n.getCurrentLanguage();
+            gtag('event', 'test_start', {
+                app_name: 'password-generator',
+                lang
+            });
+            gtag('event', 'test_complete', {
+                app_name: 'password-generator',
+                result_type: `strength_${strength.level}`,
+                lang
+            });
+        }
     }
 
     displayPassword(password) {
@@ -349,6 +367,285 @@ class PasswordGenerator {
             this.updateHistoryUI();
         }
     }
+
+    tr(key, fallback) {
+        const val = i18n.t(key);
+        return val && val !== key ? val : fallback;
+    }
+
+    getShareUrl() {
+        const lang = i18n.getCurrentLanguage() || 'en';
+        return `${window.location.origin}/password-generator/?lang=${encodeURIComponent(lang)}&utm_source=share`;
+    }
+
+    showToast(message) {
+        let toast = document.getElementById('pwd-toast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'pwd-toast';
+            toast.className = 'pwd-toast';
+            toast.setAttribute('role', 'status');
+            toast.setAttribute('aria-live', 'polite');
+            document.body.appendChild(toast);
+        }
+        toast.textContent = message;
+        toast.classList.add('visible');
+        clearTimeout(this.toastTimer);
+        this.toastTimer = setTimeout(() => toast.classList.remove('visible'), 2200);
+    }
+
+    async copyShareUrl(methodLabel = 'clipboard') {
+        const shareUrl = this.getShareUrl();
+        const copied = this.tr('share.copiedUrl', 'Tool link copied!');
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            try { await navigator.clipboard.writeText(shareUrl); } catch (e) {}
+        } else {
+            const ta = document.createElement('textarea');
+            ta.value = shareUrl;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand('copy'); } catch (e) {}
+            ta.remove();
+        }
+        this.showToast(copied);
+        if (typeof gtag === 'function') {
+            gtag('event', 'share', {
+                method: methodLabel,
+                app_name: 'password-generator',
+                lang: i18n.getCurrentLanguage()
+            });
+        }
+    }
+
+    async shareNativeOrCopy() {
+        const shareUrl = this.getShareUrl();
+        const title = this.tr('header.title', document.title);
+        if (navigator.share) {
+            try {
+                await navigator.share({ title, url: shareUrl });
+                if (typeof gtag === 'function') {
+                    gtag('event', 'share', {
+                        method: 'native',
+                        app_name: 'password-generator',
+                        lang: i18n.getCurrentLanguage()
+                    });
+                }
+                return;
+            } catch (e) {
+                if (e && e.name === 'AbortError') return;
+            }
+        }
+        await this.copyShareUrl('clipboard');
+    }
+
+    shareOnX() {
+        const shareUrl = this.getShareUrl();
+        const text = this.tr('share.tweetText', 'Check your password hygiene locally with DopaBrain Password Generator.');
+        window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(shareUrl)}`, '_blank', 'noopener,noreferrer');
+        if (typeof gtag === 'function') {
+            gtag('event', 'share', {
+                method: 'twitter',
+                app_name: 'password-generator',
+                lang: i18n.getCurrentLanguage()
+            });
+        }
+    }
+
+    generateStoryCard() {
+        const canvas = document.getElementById('shareCanvas');
+        const saveBtn = document.getElementById('saveCardBtn');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return;
+
+        const lang = i18n.getCurrentLanguage() || 'en';
+        const strength = this.calculateStrength(this.currentPassword || '');
+        if (saveBtn) {
+            saveBtn.disabled = true;
+            saveBtn.textContent = this.tr('share.savingCard', 'Creating card...');
+        }
+
+        const w = 1080;
+        const h = 1920;
+        canvas.width = w;
+        canvas.height = h;
+
+        const grad = ctx.createLinearGradient(0, 0, w, h);
+        grad.addColorStop(0, '#09111f');
+        grad.addColorStop(0.5, '#0f2942');
+        grad.addColorStop(1, '#102a43');
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, w, h);
+
+        ctx.fillStyle = 'rgba(56, 189, 248, 0.14)';
+        ctx.beginPath();
+        ctx.arc(540, 620, 310, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.strokeStyle = 'rgba(56, 189, 248, 0.72)';
+        ctx.lineWidth = 10;
+        ctx.beginPath();
+        ctx.arc(540, 620, 240, 0, Math.PI * 2);
+        ctx.stroke();
+
+        ctx.textAlign = 'center';
+        ctx.fillStyle = '#7dd3fc';
+        ctx.font = 'bold 34px system-ui, -apple-system, sans-serif';
+        ctx.fillText(this.tr('share.cardBadge', 'DOPABRAIN SECURITY TOOL'), 540, 170);
+
+        ctx.fillStyle = '#ffffff';
+        ctx.font = 'bold 64px system-ui, -apple-system, sans-serif';
+        ctx.fillText(this.tr('share.cardTitle', 'Password Security Profile'), 540, 270);
+
+        ctx.fillStyle = '#bae6fd';
+        ctx.font = '34px system-ui, -apple-system, sans-serif';
+        ctx.fillText(this.tr('share.cardSubtitle', 'Local Web Crypto entropy & hygiene check'), 540, 330);
+
+        ctx.fillStyle = '#ffffff';
+        ctx.font = 'bold 74px system-ui, -apple-system, sans-serif';
+        ctx.fillText(strength.label || 'Strong', 540, 645);
+
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.08)';
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.18)';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.roundRect(110, 1020, 860, 420, 32);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.textAlign = 'left';
+        ctx.fillStyle = '#7dd3fc';
+        ctx.font = 'bold 28px system-ui, -apple-system, sans-serif';
+        ctx.fillText(this.tr('share.cardStrengthLabel', 'STRENGTH RATING'), 175, 1110);
+
+        ctx.fillStyle = '#ffffff';
+        ctx.font = 'bold 46px system-ui, -apple-system, sans-serif';
+        ctx.fillText(strength.label || 'Very Strong', 175, 1175);
+
+        ctx.fillStyle = '#7dd3fc';
+        ctx.font = 'bold 28px system-ui, -apple-system, sans-serif';
+        ctx.fillText(this.tr('share.cardPrivacyLabel', 'PRIVACY GUARANTEE'), 175, 1295);
+
+        ctx.fillStyle = '#e0f2fe';
+        ctx.font = 'bold 42px system-ui, -apple-system, sans-serif';
+        ctx.fillText(this.tr('share.cardPrivacyValue', '100% Local Web Crypto API'), 175, 1360);
+
+        ctx.textAlign = 'center';
+        ctx.fillStyle = '#e2e8f0';
+        ctx.font = 'bold 34px system-ui, -apple-system, sans-serif';
+        ctx.fillText(this.tr('share.cardCta', 'Generate free at dopabrain.com/password-generator'), 540, 1730);
+
+        ctx.fillStyle = '#94a3b8';
+        ctx.font = '26px system-ui, -apple-system, sans-serif';
+        ctx.fillText(`dopabrain.com/password-generator/?lang=${lang}`, 540, 1795);
+
+        try {
+            const dataUrl = canvas.toDataURL('image/png');
+            const link = document.createElement('a');
+            link.download = 'dopabrain-password-security.png';
+            link.href = dataUrl;
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+        } catch (e) {}
+
+        this.showToast(this.tr('share.savedCard', 'Security check card saved!'));
+        if (typeof gtag === 'function') {
+            gtag('event', 'save_image', {
+                app_name: 'password-generator',
+                result_type: `strength_${strength.level}`,
+                lang
+            });
+        }
+
+        if (saveBtn) {
+            setTimeout(() => {
+                saveBtn.disabled = false;
+                saveBtn.textContent = this.tr('share.saveCard', 'Save Security Card');
+            }, 600);
+        }
+    }
+
+    renderCuratedResources() {
+        const container = document.getElementById('curated-resources-card');
+        if (!container) return;
+        const curated = i18n.t('curated');
+        if (!curated || typeof curated !== 'object' || !Array.isArray(curated.books)) return;
+
+        const lang = i18n.getCurrentLanguage() || 'en';
+        container.textContent = '';
+
+        const header = document.createElement('div');
+        header.className = 'curated-resources-header';
+        const titleEl = document.createElement('h3');
+        titleEl.className = 'curated-resources-title';
+        titleEl.textContent = curated.title || '';
+        const subEl = document.createElement('p');
+        subEl.className = 'curated-resources-subtitle';
+        subEl.textContent = curated.subtitle || '';
+        header.appendChild(titleEl);
+        header.appendChild(subEl);
+
+        const list = document.createElement('div');
+        list.className = 'curated-resources-list';
+
+        curated.books.forEach((book) => {
+            const link = document.createElement('a');
+            link.className = 'curated-book-link';
+            link.href = book.url;
+            link.target = '_blank';
+            link.rel = 'sponsored noopener noreferrer';
+
+            const meta = document.createElement('div');
+            meta.className = 'curated-book-meta';
+
+            const bTitle = document.createElement('span');
+            bTitle.className = 'curated-book-title';
+            bTitle.textContent = book.title || '';
+
+            const bAuthor = document.createElement('span');
+            bAuthor.className = 'curated-book-author';
+            bAuthor.textContent = book.author || '';
+
+            const bNote = document.createElement('span');
+            bNote.className = 'curated-book-note';
+            bNote.textContent = book.note || '';
+
+            meta.appendChild(bTitle);
+            meta.appendChild(bAuthor);
+            meta.appendChild(bNote);
+
+            const badge = document.createElement('span');
+            badge.className = 'curated-book-badge';
+            badge.textContent = curated.badge || 'Book';
+
+            link.appendChild(meta);
+            link.appendChild(badge);
+
+            link.addEventListener('click', () => {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'curated_resource_click', {
+                        app_name: 'password-generator',
+                        resource_type: 'book',
+                        item_id: book.id || 'book',
+                        lang
+                    });
+                }
+            });
+
+            list.appendChild(link);
+        });
+
+        const noteEl = document.createElement('p');
+        noteEl.className = 'curated-affiliate-note';
+        noteEl.textContent = curated.affiliateNote || '';
+
+        container.appendChild(header);
+        container.appendChild(list);
+        container.appendChild(noteEl);
+    }
 }
 
 // Theme Toggle
@@ -379,7 +676,7 @@ if (document.readyState === 'loading') {
 // Funnel bridge & language preservation
 function initRelatedFunnels() {
     const urlParams = new URLSearchParams(window.location.search);
-    const lang = urlParams.get('lang') || (window.i18n ? window.i18n.currentLang : 'ko') || 'ko';
+    const lang = (window.i18n && typeof window.i18n.getCurrentLanguage === 'function' ? window.i18n.getCurrentLanguage() : null) || urlParams.get('lang') || 'ko';
     const base = (window.location.origin && window.location.origin !== 'null') ? window.location.origin : 'https://dopabrain.com';
     document.querySelectorAll('.related-grid a').forEach(link => {
         const baseHref = link.getAttribute('data-base-href') || link.getAttribute('href');
@@ -393,12 +690,13 @@ function initRelatedFunnels() {
         if (!link.dataset.trackedCta) {
             link.dataset.trackedCta = 'true';
             link.addEventListener('click', () => {
+                const liveLang = (window.i18n && typeof window.i18n.getCurrentLanguage === 'function' ? window.i18n.getCurrentLanguage() : null) || new URLSearchParams(window.location.search).get('lang') || 'ko';
                 if (typeof gtag === 'function') {
                     gtag('event', 'content_cta_click', {
                         cta_surface: 'password_generator_related',
                         destination: link.getAttribute('href'),
                         source: 'password_generator',
-                        lang: lang
+                        lang: liveLang
                     });
                 }
             });

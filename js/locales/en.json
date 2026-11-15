@@ -68,5 +68,43 @@
     "a4": "Generated passwords are only saved in your browser's local history for convenience. They never leave your device and are not stored on any server.",
     "q5": "What makes a password strong?",
     "a5": "A strong password is long (12+ characters), uses a mix of uppercase, lowercase, numbers, and special characters, and is unique for each account."
+  },
+  "share": {
+    "saveCard": "Save Security Card",
+    "savingCard": "Creating card...",
+    "savedCard": "Security check card saved!",
+    "shareX": "Share on X",
+    "shareUrl": "Copy Link",
+    "copiedUrl": "Tool link copied!",
+    "tweetText": "Check your password hygiene and generate strong credentials locally with DopaBrain Password Generator.",
+    "cardBadge": "DOPABRAIN SECURITY TOOL",
+    "cardTitle": "Password Security Profile",
+    "cardSubtitle": "Local Web Crypto entropy & hygiene check",
+    "cardStrengthLabel": "STRENGTH RATING",
+    "cardPrivacyLabel": "PRIVACY GUARANTEE",
+    "cardPrivacyValue": "100% Local Web Crypto API",
+    "cardCta": "Generate free at dopabrain.com/password-generator"
+  },
+  "curated": {
+    "title": "Digital Security & Privacy Guides",
+    "subtitle": "Trusted reading on encryption, digital hygiene, and threat defense",
+    "badge": "Book Pick",
+    "affiliateNote": "Contains book referral links supporting DopaBrain free tools.",
+    "books": [
+      {
+        "id": "data-and-goliath",
+        "title": "Data and Goliath: Hidden Battles to Collect Your Data",
+        "author": "Bruce Schneier",
+        "note": "Foundational guide to threat modeling, surveillance, and digital self-defense.",
+        "url": "https://www.amazon.com/dp/039335217X?tag=dopabrain-20"
+      },
+      {
+        "id": "art-of-invisibility",
+        "title": "The Art of Invisibility",
+        "author": "Kevin Mitnick",
+        "note": "Actionable password hygiene, two-factor defense, and everyday security habits.",
+        "url": "https://www.amazon.com/dp/0316380504?tag=dopabrain-20"
+      }
+    ]
   }
 }

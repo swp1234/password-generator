@@ -68,5 +68,43 @@
     "a4": "जनरेट पासवर्ड केवल ब्राउज़र के स्थानीय इतिहास में सहेजे जाते हैं। वे कभी आपका डिवाइस नहीं छोड़ते।",
     "q5": "पासवर्ड को मजबूत क्या बनाता है?",
     "a5": "एक मजबूत पासवर्ड लंबा (12+ अक्षर) होता है, विभिन्न अक्षर प्रकारों का मिश्रण करता है, और प्रत्येक खाते के लिए अद्वितीय होता है।"
+  },
+  "share": {
+    "saveCard": "सुरक्षा कार्ड सहेजें",
+    "savingCard": "तैयार हो रहा है...",
+    "savedCard": "सुरक्षा कार्ड सहेजा गया!",
+    "shareX": "X पर साझा करें",
+    "shareUrl": "लिंक कॉपी करें",
+    "copiedUrl": "लिंक कॉपी हो गया!",
+    "tweetText": "DopaBrain पासवर्ड जनरेटर के साथ ब्राउज़र में स्थानीय Web Crypto API द्वारा मज़बूत पासवर्ड बनाएँ।",
+    "cardBadge": "DOPABRAIN सुरक्षा टूल",
+    "cardTitle": "पासवर्ड सुरक्षा प्रोफ़ाइल",
+    "cardSubtitle": "स्थानीय Web Crypto एन्ट्रॉपी जांच",
+    "cardStrengthLabel": "मज़बूती स्तर",
+    "cardPrivacyLabel": "गोपनीयता गारंटी",
+    "cardPrivacyValue": "100% स्थानीय ब्राउज़र निर्माण",
+    "cardCta": "मुफ़्त उपयोग: dopabrain.com/password-generator"
+  },
+  "curated": {
+    "title": "डिजिटल सुरक्षा और गोपनीयता पुस्तकें",
+    "subtitle": "एन्क्रिप्शन, पासवर्ड सुरक्षा और ऑनलाइन गोपनीयता पर प्रमुख पुस्तकें",
+    "badge": "पुस्तक",
+    "affiliateNote": "इसमें पुस्तक संदर्भ लिंक हैं जो DopaBrain के मुफ़्त टूल्स का समर्थन करते हैं।",
+    "books": [
+      {
+        "id": "data-and-goliath",
+        "title": "Data and Goliath",
+        "author": "Bruce Schneier",
+        "note": "व्यक्तिगत डेटा सुरक्षा और डिजिटल आत्मरक्षा पर प्रमुख मार्गदर्शिका।",
+        "url": "https://www.amazon.com/dp/039335217X?tag=dopabrain-20"
+      },
+      {
+        "id": "art-of-invisibility",
+        "title": "The Art of Invisibility",
+        "author": "Kevin Mitnick",
+        "note": "मज़बूत पासवर्ड और खाता सुरक्षा के व्यावहारिक उपाय।",
+        "url": "https://www.amazon.com/dp/0316380504?tag=dopabrain-20"
+      }
+    ]
   }
 }

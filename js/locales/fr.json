@@ -68,5 +68,43 @@
     "a4": "Sauvegardés uniquement dans l'historique local de votre navigateur. Ils ne quittent jamais votre appareil.",
     "q5": "Qu'est-ce qui rend un mot de passe fort ?",
     "a5": "Un mot de passe fort est long (12+), utilise un mélange de caractères et est unique pour chaque compte."
+  },
+  "share": {
+    "saveCard": "Enregistrer la carte",
+    "savingCard": "Création...",
+    "savedCard": "Carte enregistrée !",
+    "shareX": "Partager sur X",
+    "shareUrl": "Copier le lien",
+    "copiedUrl": "Lien copié !",
+    "tweetText": "Générez des mots de passe robustes localement avec Web Crypto API sur DopaBrain Password Generator.",
+    "cardBadge": "DOPABRAIN SÉCURITÉ",
+    "cardTitle": "Profil de Sécurité",
+    "cardSubtitle": "Entropie Web Crypto locale dans le navigateur",
+    "cardStrengthLabel": "NIVEAU DE FORCE",
+    "cardPrivacyLabel": "CONFIDENTIALITÉ",
+    "cardPrivacyValue": "100% Local sans serveur",
+    "cardCta": "Gratuit sur dopabrain.com/password-generator"
+  },
+  "curated": {
+    "title": "Guides sur la sécurité numérique",
+    "subtitle": "Ouvrages de référence sur le chiffrement et l’hygiène des mots de passe",
+    "badge": "Livre",
+    "affiliateNote": "Contient des liens de recommandation soutenant les outils gratuits DopaBrain.",
+    "books": [
+      {
+        "id": "data-and-goliath",
+        "title": "Data and Goliath",
+        "author": "Bruce Schneier",
+        "note": "Référence essentielle sur la protection de la vie privée numérique.",
+        "url": "https://www.amazon.com/dp/039335217X?tag=dopabrain-20"
+      },
+      {
+        "id": "art-of-invisibility",
+        "title": "L’Art de l’invisibilité (The Art of Invisibility)",
+        "author": "Kevin Mitnick",
+        "note": "Réflexes concrets pour sécuriser vos comptes et mots de passe.",
+        "url": "https://www.amazon.com/dp/0316380504?tag=dopabrain-20"
+      }
+    ]
   }
 }

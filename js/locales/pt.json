@@ -68,5 +68,43 @@
     "a4": "São salvas apenas no histórico local do navegador. Nunca saem do seu dispositivo.",
     "q5": "O que torna uma senha forte?",
     "a5": "Uma senha forte é longa (12+), usa mistura de caracteres e é única para cada conta."
+  },
+  "share": {
+    "saveCard": "Salvar Cartão",
+    "savingCard": "Gerando...",
+    "savedCard": "Cartão de segurança salvo!",
+    "shareX": "Compartilhar no X",
+    "shareUrl": "Copiar Link",
+    "copiedUrl": "Link copiado!",
+    "tweetText": "Gerando senhas fortes localmente com Web Crypto API no Gerador de Senhas DopaBrain.",
+    "cardBadge": "DOPABRAIN SEGURANÇA",
+    "cardTitle": "Perfil de Segurança",
+    "cardSubtitle": "Checagem local com Web Crypto API",
+    "cardStrengthLabel": "NÍVEL DE FORÇA",
+    "cardPrivacyLabel": "PRIVACIDADE",
+    "cardPrivacyValue": "100% Local no navegador",
+    "cardCta": "Grátis em dopabrain.com/password-generator"
+  },
+  "curated": {
+    "title": "Guias de Segurança Digital",
+    "subtitle": "Livros confiáveis sobre criptografia, senhas e privacidade pessoal",
+    "badge": "Livro",
+    "affiliateNote": "Contém links de indicação que apoiam as ferramentas gratuitas da DopaBrain.",
+    "books": [
+      {
+        "id": "data-and-goliath",
+        "title": "Data and Goliath",
+        "author": "Bruce Schneier",
+        "note": "Panorama essencial sobre defesa digital e proteção contra coleta de dados.",
+        "url": "https://www.amazon.com/dp/039335217X?tag=dopabrain-20"
+      },
+      {
+        "id": "art-of-invisibility",
+        "title": "A Arte da Invisibilidade (The Art of Invisibility)",
+        "author": "Kevin Mitnick",
+        "note": "Práticas diárias para senhas robustas e proteção de contas online.",
+        "url": "https://www.amazon.com/dp/0316380504?tag=dopabrain-20"
+      }
+    ]
   }
 }

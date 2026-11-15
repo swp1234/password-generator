@@ -68,5 +68,43 @@
     "a4": "生成されたパスワードはブラウザのローカル履歴にのみ保存されます。デバイスから離れません。",
     "q5": "強力なパスワードとは？",
     "a5": "強力なパスワードは長く(12文字以上)、様々な文字タイプを組み合わせ、アカウントごとに一意です。"
+  },
+  "share": {
+    "saveCard": "セキュリティカード保存",
+    "savingCard": "作成中...",
+    "savedCard": "カードを保存しました！",
+    "shareX": "Xで共有",
+    "shareUrl": "リンクをコピー",
+    "copiedUrl": "リンクをコピーしました！",
+    "tweetText": "ローカル Web Crypto API で安全なパスワードを生成できる DopaBrain パスワード生成ツール。",
+    "cardBadge": "DOPABRAIN セキュリティ",
+    "cardTitle": "パスワード安全性診断",
+    "cardSubtitle": "ブラウザ完結 Web Crypto 強度チェック",
+    "cardStrengthLabel": "強度レベル",
+    "cardPrivacyLabel": "プライバシー保証",
+    "cardPrivacyValue": "100% ローカル端末生成",
+    "cardCta": "dopabrain.com/password-generator で無料生成"
+  },
+  "curated": {
+    "title": "セキュリティ・プライバシー推薦書籍",
+    "subtitle": "暗号技術・アカウント保護・オンライン安全性を学ぶ定番書",
+    "badge": "書籍案内",
+    "affiliateNote": "無料ツール運営を支える紹介リンクが含まれています。",
+    "books": [
+      {
+        "id": "data-and-goliath",
+        "title": "Data and Goliath (データとゴリアテ)",
+        "author": "Bruce Schneier",
+        "note": "現代のデータ監視社会で個人の安全を守るセキュリティ実践論。",
+        "url": "https://www.amazon.com/dp/039335217X?tag=dopabrain-20"
+      },
+      {
+        "id": "art-of-invisibility",
+        "title": "The Art of Invisibility (透明人間になる技術)",
+        "author": "Kevin Mitnick",
+        "note": "強力なパスワード管理と多要素認証の実用セキュリティガイド。",
+        "url": "https://www.amazon.com/dp/0316380504?tag=dopabrain-20"
+      }
+    ]
   }
 }

@@ -68,5 +68,43 @@
     "a4": "Nur im lokalen Verlauf Ihres Browsers gespeichert. Sie verlassen niemals Ihr Gerät.",
     "q5": "Was macht ein Passwort stark?",
     "a5": "Ein starkes Passwort ist lang (12+), verwendet verschiedene Zeichentypen und ist für jedes Konto einzigartig."
+  },
+  "share": {
+    "saveCard": "Sicherheitskarte speichern",
+    "savingCard": "Wird erstellt...",
+    "savedCard": "Sicherheitskarte gespeichert!",
+    "shareX": "Auf X teilen",
+    "shareUrl": "Link kopieren",
+    "copiedUrl": "Link kopiert!",
+    "tweetText": "Sichere Passwörter direkt im Browser per Web Crypto API mit dem DopaBrain Passwort-Generator erstellen.",
+    "cardBadge": "DOPABRAIN SICHERHEIT",
+    "cardTitle": "Passwort-Sicherheitsprofil",
+    "cardSubtitle": "Lokale Web Crypto Entropie-Prüfung",
+    "cardStrengthLabel": "SICHERHEITSSTUFE",
+    "cardPrivacyLabel": "DATENSCHUTZ",
+    "cardPrivacyValue": "100% Lokal im Browser",
+    "cardCta": "Kostenlos auf dopabrain.com/password-generator"
+  },
+  "curated": {
+    "title": "Bücher zu Cybersicherheit & Privatsphäre",
+    "subtitle": "Bewährte Lektüre über Verschlüsselung, Passwort-Hygiene und Datenschutz",
+    "badge": "Buchtipp",
+    "affiliateNote": "Enthält Buchempfehlungs-Links zur Unterstützung kostenloser DopaBrain-Tools.",
+    "books": [
+      {
+        "id": "data-and-goliath",
+        "title": "Data and Goliath",
+        "author": "Bruce Schneier",
+        "note": "Grundlegendes Werk zu digitaler Selbstverteidigung und Datenschutz.",
+        "url": "https://www.amazon.com/dp/039335217X?tag=dopabrain-20"
+      },
+      {
+        "id": "art-of-invisibility",
+        "title": "Die Kunst der Unsichtbarkeit (The Art of Invisibility)",
+        "author": "Kevin Mitnick",
+        "note": "Konkrete Gewohnheiten für sichere Passwörter und Kontoschutz.",
+        "url": "https://www.amazon.com/dp/0316380504?tag=dopabrain-20"
+      }
+    ]
   }
 }
