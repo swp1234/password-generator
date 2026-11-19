@@ -259,7 +259,19 @@
                 <button class="clear-history-btn" id="clear-history-btn" data-i18n="buttons.clearHistory">히스토리 삭제</button>
             </div>
 
-            <section id="curated-resources-card" class="curated-resources-card" aria-label="Digital Security Guides"></section>
+                    <section class="next-step-card" id="nextStepCard" aria-label="10-Year Future Self Archetype">
+            <p class="next-step-label" data-i18n="nextStep.label">Recommended Next Step</p>
+            <div class="next-step-main">
+                <span class="next-step-emoji" aria-hidden="true">🔮</span>
+                <div class="next-step-content">
+                    <h4 class="next-step-title" data-i18n="nextStep.title">10-Year Future Self Archetype</h4>
+                    <p class="next-step-desc" data-i18n="nextStep.desc">Turn today’s priorities into a clear 10-year roadmap of energy and direction in 8 questions.</p>
+                </div>
+            </div>
+            <a href="/future-self/?lang=en&amp;start=1&amp;source=password_generator_result" class="next-step-cta" id="nextStepCta" data-i18n="nextStep.cta">Explore Future Self →</a>
+        </section>
+
+<section id="curated-resources-card" class="curated-resources-card" aria-label="Digital Security Guides"></section>
             <canvas id="shareCanvas" width="1080" height="1920" style="display:none;"></canvas>
 
             <!-- Related Apps placeholder removed - moved to bottom 2x2 grid -->
@@ -304,5 +316,35 @@
       </div>
     </div>
     <script src="/portal/js/cross-promo.js" defer></script>
+
+    <script>
+      (function () {
+        var cta = document.getElementById('nextStepCta');
+        if (!cta) return;
+        function syncHref() {
+          var lang = (window.i18n && (window.i18n.currentLang || (typeof window.i18n.getCurrentLanguage === 'function' && window.i18n.getCurrentLanguage())))
+            || new URLSearchParams(window.location.search).get('lang')
+            || document.documentElement.lang
+            || 'en';
+          try {
+            var u = new URL(cta.getAttribute('href'), window.location.origin);
+            u.searchParams.set('lang', lang);
+            u.searchParams.set('source', 'password_generator_result');
+            cta.setAttribute('href', u.pathname + u.search);
+          } catch (e) {}
+        }
+        syncHref();
+        cta.addEventListener('click', function () {
+          syncHref();
+          if (typeof gtag === 'function') {
+            gtag('event', 'content_cta_click', {
+              cta_surface: 'next_step_hero',
+              destination: cta.getAttribute('href'),
+              source: 'password_generator_result'
+            });
+          }
+        });
+      })();
+    </script>
 </body>
 </html>
